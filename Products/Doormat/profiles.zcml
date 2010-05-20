@@ -12,7 +12,7 @@
       name="default"
       title="Doormat"
       directory="profiles/default"
-      description="Adds a Doormat (manageable sitemap) to your site footer."
+      description="Extension profile for Doormat."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
   
