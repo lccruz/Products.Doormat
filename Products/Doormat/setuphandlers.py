@@ -38,7 +38,7 @@ def updateRoleMappings(context):
 def postInstall(context):
     """Called as at the end of the setup process. """
     # the right place for your custom code
-    if isNotAGXProfileProfile(context): return
+    if isNotDoormatProfile(context): return
     site = context.getSite()
 
 
