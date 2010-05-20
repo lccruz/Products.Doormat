@@ -5,7 +5,7 @@ version = '0.1'
 
 setup(name='Products.Doormat',
       version=version,
-      description="",
+      description="Adds a Doormat to the footer. A Doormat is a collection of internal and external links which make navigating the site easier. It's like a sitemap, but one that is managed as content.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
