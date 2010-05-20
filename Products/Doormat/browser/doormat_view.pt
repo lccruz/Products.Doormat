@@ -1,5 +1,7 @@
 <div id="doormat">
-  <h4>Vind alles op onze website</h4>
+  <h4 tal:content="view/getDoormatTitle">
+    [Doormat title]
+  </h4>
   <div tal:repeat="column view/getDoormatData">
     <dl tal:repeat="category column/col_cats">
       <dt tal:content="category/cat_title">[title for category]</dt>

@@ -8,8 +8,6 @@
 
   <include file="profiles.zcml" />
 
-
-
   <!-- ##code-section configure.zcml -->
   <include package=".browser" />
   <!-- ##/code-section configure.zcml -->

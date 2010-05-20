@@ -11,6 +11,11 @@ class DoormatView(BrowserView):
     """
     """
 
+    def getDoormatTitle(self):
+        """
+        """
+        return self.context.Title()
+         
     def getDoormatData(self):
         """ Return a dictionary like this:
         data = [

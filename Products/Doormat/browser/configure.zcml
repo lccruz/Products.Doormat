@@ -10,10 +10,17 @@
 
   <browser:page
      for="..content.interfaces.IDoormat"
-     name="DoormatView"
+     name="doormat-view"
      class=".views.DoormatView"
      template="doormat_view.pt"
      permission="zope2.View"
      />
+
+    <browser:viewlet
+        name="doormat.footer"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        template="doormat_viewlet.pt"
+        permission="zope2.View" 
+    />
 
 </configure>
