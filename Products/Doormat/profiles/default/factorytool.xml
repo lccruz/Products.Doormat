@@ -4,5 +4,6 @@
   <type portal_type="Doormat"/>
   <type portal_type="DoormatColumn"/>
   <type portal_type="DoormatSection"/>
+  <type portal_type="DoormatReference"/>
  </factorytypes>
 </object>

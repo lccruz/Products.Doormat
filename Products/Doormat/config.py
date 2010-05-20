@@ -36,11 +36,13 @@ ADD_CONTENT_PERMISSIONS = {
     'Doormat': 'Doormat: Add Doormat',
     'DoormatColumn': 'Doormat: Add DoormatColumn',
     'DoormatSection': 'Doormat: Add DoormatSection',
+    'DoormatReference': 'Doormat: Add DoormatReference',
 }
 
 setDefaultRoles('Doormat: Add Doormat', ('Manager','Owner'))
 setDefaultRoles('Doormat: Add DoormatColumn', ('Manager','Owner'))
 setDefaultRoles('Doormat: Add DoormatSection', ('Manager','Owner'))
+setDefaultRoles('Doormat: Add DoormatReference', ('Manager','Owner'))
 
 product_globals = globals()
 

@@ -1,0 +1,19 @@
+<configure 
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="Doormat">
+
+
+  <browser:page
+     for="..content.interfaces.IDoormat"
+     name="DoormatView"
+     class=".views.DoormatView"
+     template="doormat_view.pt"
+     permission="zope2.View"
+     />
+
+</configure>

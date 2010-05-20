@@ -39,6 +39,7 @@ __docformat__ = 'plaintext'
 import Doormat
 import DoormatColumn
 import DoormatSection
+import DoormatReference
 
 ##code-section init-module-footer #fill in your manual code here
 ##/code-section init-module-footer

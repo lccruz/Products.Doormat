@@ -16,3 +16,8 @@ msgstr ""
 "Preferred-Encodings: latin1 utf-8\n"
 "Domain: Doormat\n"
 
+#. Default: "Internal_link"
+#: content/DoormatReference.py
+msgid "Doormat_label_internal_link"
+msgstr ""
+

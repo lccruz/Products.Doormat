@@ -1,0 +1,14 @@
+<div id="doormat">
+  <h4>Vind alles op onze website</h4>
+  <div tal:repeat="column view/getDoormatData">
+    <dl tal:repeat="category column/col_cats">
+      <dt tal:content="category/cat_title">[title for category]</dt>
+      <dd tal:repeat="link category/cat_links">
+        <a tal:attributes="href link/link_url"
+            tal:content="link/link_title">
+          [link title]
+        </a>
+      </dd>
+    </dl>
+  </div>
+</div>
