@@ -5,7 +5,7 @@ version = '0.1'
 
 setup(name='Products.Doormat',
       version=version,
-      description="Adds a doormat to the Plone footer. A doormat is a hierarchical collection of links to make navigating the site easier. The items in the doormat are manageable as content.",
+      description="Adds a doormat viewlet and installs in in the Plone footer.  The links in the doormat are manageable as content.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read() +
                        open(os.path.join("docs", "TODO.txt")).read(),

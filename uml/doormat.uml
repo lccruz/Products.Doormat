@@ -48,7 +48,7 @@
 			UML 1.4
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Jun 08 16:16:01 CEST 2010'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Tue Jun 08 17:53:42 CEST 2010'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.30(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -3017,7 +3017,8 @@
               </UML:Classifier.feature>
             </UML:Class>
             <UML:Association xmi.id = '127-0-1-1--4046b3db:128b49e7131:-8000:00000000000013F1'
-              name = '' isSpecification = 'false' isRoot = 'false' isLeaf = 'false' isAbstract = 'false'>
+              name = 'section_contains_references' isSpecification = 'false' isRoot = 'false'
+              isLeaf = 'false' isAbstract = 'false'>
               <UML:Association.connection>
                 <UML:AssociationEnd xmi.id = '127-0-1-1--4046b3db:128b49e7131:-8000:00000000000013F2'
                   visibility = 'public' isSpecification = 'false' isNavigable = 'true' ordering = 'unordered'
@@ -3062,9 +3063,9 @@
                   name = 'showTitle' visibility = 'public' isSpecification = 'false' ownerScope = 'instance'
                   changeability = 'changeable' targetScope = 'instance'>
                   <UML:StructuralFeature.multiplicity>
-                    <UML:Multiplicity xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:000000000000131D'>
+                    <UML:Multiplicity xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:0000000000001321'>
                       <UML:Multiplicity.range>
-                        <UML:MultiplicityRange xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:000000000000131C'
+                        <UML:MultiplicityRange xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:0000000000001320'
                           lower = '1' upper = '1'/>
                       </UML:Multiplicity.range>
                     </UML:Multiplicity>
@@ -3072,14 +3073,14 @@
                   <UML:ModelElement.taggedValue>
                     <UML:TaggedValue xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:000000000000130F'
                       isSpecification = 'false'>
-                      <UML:TaggedValue.dataValue>Show title in Doormat</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.dataValue>Show title in viewlet</UML:TaggedValue.dataValue>
                       <UML:TaggedValue.type>
                         <UML:TagDefinition xmi.idref = 'e14a5cda-77c4-5e17-80f0-3ed5c7774d5e'/>
                       </UML:TaggedValue.type>
                     </UML:TaggedValue>
                     <UML:TaggedValue xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:0000000000001310'
                       isSpecification = 'false'>
-                      <UML:TaggedValue.dataValue>If checked, the Doormat / Column / Section&apos;s title will be displayed in the doormat viewlet.</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.dataValue>If checked, this Doormat / Column / Section&apos;s title will be displayed in the doormat viewlet.</UML:TaggedValue.dataValue>
                       <UML:TaggedValue.type>
                         <UML:TagDefinition xmi.idref = 'aa59fe2f-5712-5afd-bd60-2c663257820d'/>
                       </UML:TaggedValue.type>
@@ -3106,7 +3107,7 @@
               </UML:Classifier.feature>
             </UML:Class>
             <UML:Generalization xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:0000000000001312'
-              isSpecification = 'false'>
+              name = 'section_extends_mixin' isSpecification = 'false'>
               <UML:Generalization.child>
                 <UML:Class xmi.idref = '127-0-1-1--4046b3db:128b49e7131:-8000:00000000000013C7'/>
               </UML:Generalization.child>
@@ -3115,7 +3116,7 @@
               </UML:Generalization.parent>
             </UML:Generalization>
             <UML:Generalization xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:0000000000001313'
-              isSpecification = 'false'>
+              name = 'column_extends_mixin' isSpecification = 'false'>
               <UML:Generalization.child>
                 <UML:Class xmi.idref = '127-0-1-1--4046b3db:128b49e7131:-8000:00000000000013C6'/>
               </UML:Generalization.child>
@@ -3124,7 +3125,7 @@
               </UML:Generalization.parent>
             </UML:Generalization>
             <UML:Generalization xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:0000000000001314'
-              isSpecification = 'false'>
+              name = 'doormat_extends_mixin' isSpecification = 'false'>
               <UML:Generalization.child>
                 <UML:Class xmi.idref = '127-0-1-1--4046b3db:128b49e7131:-8000:00000000000013C5'/>
               </UML:Generalization.child>
@@ -3242,6 +3243,18 @@
     <UML:Multiplicity xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:000000000000131B'>
       <UML:Multiplicity.range>
         <UML:MultiplicityRange xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:000000000000131A'
+          lower = '1' upper = '1'/>
+      </UML:Multiplicity.range>
+    </UML:Multiplicity>
+    <UML:Multiplicity xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:000000000000131D'>
+      <UML:Multiplicity.range>
+        <UML:MultiplicityRange xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:000000000000131C'
+          lower = '1' upper = '1'/>
+      </UML:Multiplicity.range>
+    </UML:Multiplicity>
+    <UML:Multiplicity xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:000000000000131F'>
+      <UML:Multiplicity.range>
+        <UML:MultiplicityRange xmi.id = '127-0-1-1--2f7f38ab:12917758aed:-8000:000000000000131E'
           lower = '1' upper = '1'/>
       </UML:Multiplicity.range>
     </UML:Multiplicity>
@@ -4464,8 +4477,10 @@
       stroke="1"
       strokecolor="black"
     >
-      <moveto x="560"
+      <moveto x="584"
               y="139" />
+      <lineto x="584"
+              y="184" />
       <lineto x="217"
               y="184" />
     </path>
@@ -4496,8 +4511,10 @@
       strokecolor="black"
     >
       <moveto x="328"
-              y="139" />
-      <lineto x="217"
+              y="136" />
+      <lineto x="208"
+              y="136" />
+      <lineto x="208"
               y="184" />
     </path>
   </group>

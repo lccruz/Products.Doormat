@@ -1,13 +1,12 @@
 Introduction
 ============
 
-A "Doormat" is a large collection of links at the bottom of a page. Most of
-these links will be internal, so the doormat may effectively act as a sitemap.
-(See examples_.) 
+A doormat is a large collection of links which are presented in a structured
+way. (See examples_ of doormats.) 
 
 This product adds a couple of content types (Archetypes), which are used to
-create a structure which is used for generating a doormat. This doormat is
-placed in the Plone footer. The links in the Doormat are thus managed as
+create a structure which is used for generating a doormat. A viewlet on this
+doormat is placed in the Plone footer. The links in the Doormat are managed as
 content, making the Doormat more flexible than a sitemap.  It's also possible
 to add external links.
 
@@ -16,8 +15,9 @@ Getting started
 ===============
 
 After installing the product in your site, you can add a "Doormat" item to your
-Plone site. Inside it, you can create a hierarchical structure of Columns,
-Sections and links (both internal and external). 
+Plone site. (Exclude it from navigation using the "Settings" tab.) Inside it,
+you can create a hierarchical structure of Columns, Sections and links (both
+internal and external). 
 
 The Doormat will look like this::
 
@@ -70,6 +70,7 @@ Dependencies / Requirements
 
 The product works on:
 
+    * Plone 3
     * Plone 4
 
 
