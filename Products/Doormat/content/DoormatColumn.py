@@ -16,7 +16,7 @@ from AccessControl import ClassSecurityInfo
 from Products.Archetypes.atapi import *
 from zope.interface import implements
 import interfaces
-
+from Products.Doormat.content.DoormatMixin import DoormatMixin
 from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 
 from Products.ATContentTypes.content.folder import ATFolder
@@ -36,12 +36,13 @@ schema = Schema((
 ##/code-section after-local-schema
 
 DoormatColumn_schema = ATFolderSchema.copy() + \
+    getattr(DoormatMixin, 'schema', Schema(())).copy() + \
     schema.copy()
 
 ##code-section after-schema #fill in your manual code here
 ##/code-section after-schema
 
-class DoormatColumn(ATFolder):
+class DoormatColumn(ATFolder, DoormatMixin):
     """
     """
     security = ClassSecurityInfo()

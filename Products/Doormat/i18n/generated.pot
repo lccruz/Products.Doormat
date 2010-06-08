@@ -16,8 +16,18 @@ msgstr ""
 "Preferred-Encodings: latin1 utf-8\n"
 "Domain: Doormat\n"
 
+#. Default: "If checked, the Doormat / Column / Section's title will be displayed in the doormat viewlet."
+#: content/DoormatMixin.py
+msgid "Doormat_help_showTitle"
+msgstr ""
+
 #. Default: "Internal_link"
 #: content/DoormatReference.py
 msgid "Doormat_label_internal_link"
+msgstr ""
+
+#. Default: "Show title in Doormat"
+#: content/DoormatMixin.py
+msgid "Doormat_label_showTitle"
 msgstr ""
 

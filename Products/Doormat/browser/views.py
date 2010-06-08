@@ -14,15 +14,18 @@ class DoormatView(BrowserView):
     def getDoormatTitle(self):
         """
         """
-        return self.context.Title()
+        title = ''
+        if self.context.getShowTitle():
+            title = self.context.Title()
+        return title
          
     def getDoormatData(self):
         """ Return a dictionary like this:
         data = [
-            {   'col_title: 'Column One',
-                'col_cats: [
-                {   'cat_title': 'De Oosterpoort',
-                    'cat_links': [
+            {   'column_title: 'Column One',
+                'column_sections: [
+                {   'section_title': 'De Oosterpoort',
+                    'section_links': [
                         {   'link_title': 'Adres OP',
                             'link_url': 'link.naar.adres',
                             },
@@ -32,19 +35,25 @@ class DoormatView(BrowserView):
             },
         ]
         """
-        dm = self.context
+        doormat = self.context
         data = []
         # Fetch Columns
-        for col_brain in dm.getFolderContents():
-            col_dict = {'col_title': col_brain.Title}
-            col_cats = []
-            cat_brains = col_brain.getObject().getFolderContents()
+        for column_brain in doormat.getFolderContents():
+            column_dict = {
+                'column_title': column_brain.Title,
+                'show_title': column_brain.getShowTitle,
+                }
+            column_sections = []
+            section_brains = column_brain.getObject().getFolderContents()
 
             # Fetch Categories from Column
-            for cat_brain in cat_brains:
-                cat_dict = {'cat_title': cat_brain.Title}
-                cat_links = []
-                link_brains = cat_brain.getObject().getFolderContents()
+            for section_brain in section_brains:
+                section_dict = {
+                    'section_title': section_brain.Title,
+                    'show_title': section_brain.getShowTitle,
+                    }
+                section_links = []
+                link_brains = section_brain.getObject().getFolderContents()
 
                 # Loop over all link object in category
                 for link_brain in link_brains:
@@ -63,11 +72,11 @@ class DoormatView(BrowserView):
                         if not url:
                             continue
                     link_dict = {'link_url': url, 'link_title': title}
-                    cat_links.append(link_dict)
-                cat_dict['cat_links'] = cat_links
-                col_cats.append(cat_dict)
-            col_dict['col_cats'] = col_cats
-            data.append(col_dict)
+                    section_links.append(link_dict)
+                section_dict['section_links'] = section_links
+                column_sections.append(section_dict)
+            column_dict['column_sections'] = column_sections
+            data.append(column_dict)
         return data
 
 

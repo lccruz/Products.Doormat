@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# File: Doormat.py
+# File: DoormatMixin.py
 #
 # Copyright (c) 2010 by []
 # Generator: ArchGenXML Version 2.4.1
@@ -16,11 +16,9 @@ from AccessControl import ClassSecurityInfo
 from Products.Archetypes.atapi import *
 from zope.interface import implements
 import interfaces
-from Products.Doormat.content.DoormatMixin import DoormatMixin
+
 from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 
-from Products.ATContentTypes.content.folder import ATFolder
-from Products.ATContentTypes.content.folder import ATFolderSchema
 from Products.Doormat.config import *
 
 ##code-section module-header #fill in your manual code here
@@ -28,6 +26,17 @@ from Products.Doormat.config import *
 
 schema = Schema((
 
+    BooleanField(
+        name='showTitle',
+        default="True",
+        widget=BooleanField._properties['widget'](
+            label="Show title in Doormat",
+            description="If checked, the Doormat / Column / Section's title will be displayed in the doormat viewlet.",
+            label_msgid='Doormat_label_showTitle',
+            description_msgid='Doormat_help_showTitle',
+            i18n_domain='Doormat',
+        ),
+    ),
 
 ),
 )
@@ -35,24 +44,23 @@ schema = Schema((
 ##code-section after-local-schema #fill in your manual code here
 ##/code-section after-local-schema
 
-Doormat_schema = ATFolderSchema.copy() + \
-    getattr(DoormatMixin, 'schema', Schema(())).copy() + \
+DoormatMixin_schema = BaseSchema.copy() + \
     schema.copy()
 
 ##code-section after-schema #fill in your manual code here
 ##/code-section after-schema
 
-class Doormat(ATFolder, DoormatMixin):
+class DoormatMixin(BrowserDefaultMixin):
     """
     """
     security = ClassSecurityInfo()
 
-    implements(interfaces.IDoormat)
+    implements(interfaces.IDoormatMixin)
 
-    meta_type = 'Doormat'
+    meta_type = 'DoormatMixin'
     _at_rename_after_creation = True
 
-    schema = Doormat_schema
+    schema = DoormatMixin_schema
 
     ##code-section class-header #fill in your manual code here
     ##/code-section class-header
@@ -60,8 +68,7 @@ class Doormat(ATFolder, DoormatMixin):
     # Methods
 
 
-registerType(Doormat, PROJECTNAME)
-# end of class Doormat
+# end of class DoormatMixin
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer

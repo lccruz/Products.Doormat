@@ -16,11 +16,16 @@
      permission="zope2.View"
      />
 
-    <browser:viewlet
-        name="doormat.footer"
-        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-        template="doormat_viewlet.pt"
-        permission="zope2.View" 
-    />
+  <browser:viewlet
+      name="doormat.footer"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      template="doormat_viewlet.pt"
+      permission="zope2.View" 
+      />
+
+  <browser:resourceDirectory
+      name="Products.Doormat.stylesheets"
+      directory="stylesheets"
+      />
 
 </configure>
