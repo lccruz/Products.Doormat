@@ -70,8 +70,8 @@ Dependencies / Requirements
 
 The product works on:
 
-    * Plone 3
-    * Plone 4
+* Plone 3
+* Plone 4
 
 
 .. _examples: http://www.welie.com/patterns/showPattern.php?patternID=doormat

@@ -1,4 +1,5 @@
 To do
 =====
 
-    * Add caching for getDoormatData and getDoormatTitle methods
+* Add caching for getDoormatData and getDoormatTitle methods
+* Correctly set internal / external class on link anchors
