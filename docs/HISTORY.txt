@@ -1,8 +1,11 @@
 Changelog
 =========
 
-0.2 (unreleased)
-----------------
+0.1.1 (2010-06-09)
+------------------
+
+- added locales/NOTEMPTY.txt to ensure locales/ is added to egg
+- updated doc
 
 0.1 (2010-06-08)
 ----------------
