@@ -2,7 +2,10 @@ Introduction
 ============
 
 A doormat is a large collection of links which are presented in a structured
-way. (See examples_ of doormats.) 
+way. One example is the current plone.org_, where the div#sitemap at the bottom
+is actually an ordered collection of internal and external links, with sections
+called "Downloads", "Documentation", "Developers", "Plone foundation" and
+"Support". See more examples_ of doormats.
 
 This product adds a couple of content types (Archetypes), which are used to
 create a structure which is used for generating a doormat. A viewlet on this
@@ -15,11 +18,10 @@ Getting started
 ===============
 
 After installing the product in your site, you can add a "Doormat" item to your
-Plone site. (Exclude it from navigation using the "Settings" tab.) Inside it,
-you can create a hierarchical structure of Columns, Sections and links (both
-internal and external). 
+Plone site. Inside it, you can create a hierarchical structure of Columns,
+Sections and links (both internal and external). 
 
-The Doormat will look like this::
+The Doormat will look like this, schematically::
 
     +-- Doormat -----------------------------------------+
     |                                                    |
@@ -39,9 +41,21 @@ The Doormat will look like this::
     |                                                    |
     +----------------------------------------------------+
 
+And in real life: 
+
+.. image:: http://plone.org/products/doormat/screenshot
+
+Note that the product adds an extra hierarchical layer compared to the
+plone.org_ doormat: it adds a Column, which can contain more than one Section.
+An example using this structure is the Oosterpoort_, which actually is the
+product's predecessor.
+
 
 Simple configuration
 ====================
+
+You'll probably want to exclude the doormat object from navigation using the 
+"Settings" tab. (This was not yet done when the above screenshot was taken.)
 
 There's a field `showTitle` on the folderish types (Doormat, Column and
 Section) which allows content managers to decide if the item's title should be
@@ -75,4 +89,5 @@ The product works on:
 
 
 .. _examples: http://www.welie.com/patterns/showPattern.php?patternID=doormat
-
+.. _plone.org: http://www.plone.org
+.. _Oosterpoort: http://www.de-oosterpoort.nl
