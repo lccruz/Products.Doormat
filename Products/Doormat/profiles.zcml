@@ -17,6 +17,13 @@
       />
   
   <!-- ##code-section profiles.zcml-bottom #fill in your manual code here -->
-  <!-- ##/code-section profiles.zcml-bottom -->
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="Doormat Uninstall Profile"
+      directory="profiles/uninstall"
+      description="Removes Doormat."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+   <!-- ##/code-section profiles.zcml-bottom -->
 
 </configure>
