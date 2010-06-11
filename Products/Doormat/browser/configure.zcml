@@ -20,7 +20,8 @@
       name="doormat.footer"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
       template="doormat_viewlet.pt"
-      permission="zope2.View" 
+      permission="zope2.View"
+      layer=".interfaces.IDoormatLayer" 
       />
 
   <browser:resourceDirectory
