@@ -88,6 +88,13 @@ The product works on:
 * Plone 4
 
 
+Credits
+=======
+
+This product was sponsored by GroningerForum_.
+
+
 .. _examples: http://www.welie.com/patterns/showPattern.php?patternID=doormat
 .. _plone.org: http://www.plone.org
 .. _Oosterpoort: http://www.de-oosterpoort.nl
+.. _GroningerForum: http://www.groningerforum.nl
