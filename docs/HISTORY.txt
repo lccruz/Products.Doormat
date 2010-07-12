@@ -7,6 +7,9 @@ Changelog
 - Remove empty skins/ folders doormat_styles/ and doormat_templates/ (fixes
   http://plone.org/products/doormat/issues/4: Skin dirs missing from egg)
 
+- Added viewlet doormat.footer.bare to display the doormat without the div.row
+  and div.cell wrapping.
+
 0.2 (2010-06-11)
 ----------------
 

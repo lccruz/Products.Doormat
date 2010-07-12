@@ -4,6 +4,6 @@
     tal:condition="python: len(doormat_brains) > 0">
   <tal:getView
       tal:define="doormat_object python: doormat_brains[0].getObject()"
-      tal:content="structure doormat_object/@@doormat-view"
+      tal:content="structure doormat_object/@@doormat-view-bare"
     />
 </tal:getDoormat>

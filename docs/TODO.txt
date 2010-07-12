@@ -6,6 +6,3 @@ To do
   Currently the viewlet computes the whole doormat each time it is rendered.
 
 * Correctly set internal / external class on link anchors.
-
-* Allow the viewlet to be displayed without the div.row and div.cell wrapping
-  to make it more reusable.

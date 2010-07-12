@@ -62,13 +62,38 @@ Section) which allows content managers to decide if the item's title should be
 displayed in the doormat.
 
 
-Moving the doormat
-==================
+More advanced configuration and styling
+=======================================
 
-By default, the doormat viewlet is placed in the `plone.portalfooter` viewlet
-manager. It's easy to modify this in an add-on product, so the doormat will
-display below the global navigation (portal tabs), or anywhere else in the
-site.
+This section is intended for integrators and/or developers who would like to
+customize the way the doormat is rendered in more detail.
+
+Moving the doormat
+------------------
+
+By default, the default doormat viewlet (`doormat.footer`) is placed in the
+`plone.portalfooter` viewlet manager. It's easy to modify this in an add-on
+product, so the doormat will display below the global navigation (portal tabs),
+or anywhere else in the site.
+
+
+Displaying the doormat without the extra div elements
+-----------------------------------------------------
+
+The default viewlet renders the doormat inside Plone's default footer elements,
+so it blends in with Plone 4's default Sunburst Theme::
+
+  <div class="row">
+    <div class="cell width-full position-0" >
+      <div id="doormat-container" />
+    </div>
+  </div>
+
+Using the `doormat.footer.bare` viewlet will omit the two outermost <div>'s.
+This may be handy when using the doormat in a different theme, or in a
+customized layout. You can hide the default viewlet and enable the bare version
+through `@@manage-viewlets`, or by adding a customized `viewlets.xml` to the
+product you're developing.
 
 
 Caveats

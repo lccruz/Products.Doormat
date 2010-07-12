@@ -9,4 +9,12 @@
         insert-before="*" 
         />
   </order>
+  <hidden
+      manager="plone.portalfooter"
+      skinname="*"
+      >
+    <viewlet 
+        name="doormat.footer.bare"
+        />
+  </hidden>
 </object>
