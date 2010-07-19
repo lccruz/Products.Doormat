@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3 (unreleased)
+0.3 (2010-07-19)
 ----------------
 
 - Remove empty skins/ folders doormat_styles/ and doormat_templates/ (fixes
