@@ -28,6 +28,7 @@ class DoormatView(BrowserView):
                     'section_links': [
                         {   'link_title': 'Adres OP',
                             'link_url': 'link.naar.adres',
+                            'content': 'html content',
                             },
                         ]
                     },
@@ -53,25 +54,31 @@ class DoormatView(BrowserView):
                     'show_title': section_brain.getShowTitle,
                     }
                 section_links = []
-                link_brains = section_brain.getObject().getFolderContents()
+                brains = section_brain.getObject().getFolderContents()
 
                 # Loop over all link object in category
-                for link_brain in link_brains:
+                for brain in brains:
                     # Use the link item's title, not that of the linked content
-                    title = link_brain.Title
-                    item = link_brain.getObject()
-                    item_type = item.meta_type
-                    if item_type == 'DoormatReference':
+                    title = brain.Title
+                    item = brain.getObject()
+                    text = ''
+                    url = ''
+
+                    if brain.portal_type == 'DoormatReference':
                         linked_item = item.getInternal_link()
                         if not linked_item:
                             continue
                         url = linked_item.absolute_url()
-                    else:
+                    elif brain.portal_type == "Link":
                         # Link is an Archetypes link
-                        url = link_brain.getRemoteUrl
-                        if not url:
-                            continue
-                    link_dict = {'link_url': url, 'link_title': title}
+                        url = brain.getRemoteUrl
+                    elif brain.portal_type == "Document":
+                        text = item.getText()
+                    
+                    if not (text or url):
+                        continue
+
+                    link_dict = {'content': text, 'link_url': url, 'link_title': title}
                     section_links.append(link_dict)
                 section_dict['section_links'] = section_links
                 column_sections.append(section_dict)

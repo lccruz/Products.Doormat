@@ -2,8 +2,8 @@
 #
 # File: DoormatColumn.py
 #
-# Copyright (c) 2010 by []
-# Generator: ArchGenXML Version 2.4.1
+# Copyright (c) 2010 by unknown <unknown>
+# Generator: ArchGenXML Version 2.5
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)
@@ -65,6 +65,4 @@ registerType(DoormatColumn, PROJECTNAME)
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-
-
 

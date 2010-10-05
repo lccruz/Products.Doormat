@@ -2,8 +2,8 @@
 #
 # File: DoormatMixin.py
 #
-# Copyright (c) 2010 by []
-# Generator: ArchGenXML Version 2.4.1
+# Copyright (c) 2010 by unknown <unknown>
+# Generator: ArchGenXML Version 2.5
 #            http://plone.org/products/archgenxml
 #
 # GNU General Public License (GPL)
@@ -30,8 +30,8 @@ schema = Schema((
         name='showTitle',
         default="True",
         widget=BooleanField._properties['widget'](
-            label="Show title in Doormat",
-            description="If checked, the Doormat / Column / Section's title will be displayed in the doormat viewlet.",
+            label="Show title in viewlet",
+            description="If checked, this Doormat / Column / Section's title will be displayed in the doormat viewlet.",
             label_msgid='Doormat_label_showTitle',
             description_msgid='Doormat_help_showTitle',
             i18n_domain='Doormat',
@@ -72,6 +72,4 @@ class DoormatMixin(BrowserDefaultMixin):
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-
-
 

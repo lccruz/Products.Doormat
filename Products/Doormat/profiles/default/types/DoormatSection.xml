@@ -11,11 +11,12 @@
  <property name="product">Doormat</property>
  <property name="factory">addDoormatSection</property>
  <property name="immediate_view">folder_listing</property>
- <property name="global_allow">False</property>
+ <property name="global_allow">True</property>
  <property name="filter_content_types">True</property>
  <property name="allowed_content_types">
    <element value="Link"/>
    <element value="DoormatReference"/>
+   <element value="Document"/>
  </property>
  <property name="allow_discussion">False</property>
  <property name="default_view">folder_listing</property>

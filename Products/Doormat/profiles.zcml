@@ -24,6 +24,6 @@
       description="Removes Doormat."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-   <!-- ##/code-section profiles.zcml-bottom -->
+  <!-- ##/code-section profiles.zcml-bottom -->
 
 </configure>
