@@ -11,7 +11,7 @@ This product adds a couple of content types (Archetypes), which are used to
 create a structure which is used for generating a doormat. A viewlet on this
 doormat is placed in the Plone footer. The links in the Doormat are managed as
 content, making the Doormat more flexible than a sitemap.  It's also possible
-to add external links.
+to add external links. It's also possible to add bits of text, with markup.
 
 
 Getting started
@@ -19,27 +19,31 @@ Getting started
 
 After installing the product in your site, you can add a "Doormat" item to your
 Plone site. Inside it, you can create a hierarchical structure of Columns,
-Sections and links (both internal and external). 
+Sections, links (both internal and external), and Documents (Plone's Page type). 
 
-The Doormat will look like this, schematically::
+The Doormat may look like this, schematically::
 
-    +-- Doormat -----------------------------------------+
-    |                                                    |
-    |  +-- Column 1 ----------+  + Column 2 -----------+ |
-    |  |                      |  |                     | |
-    |  |  +-- Section 1 ----+ |  | +-- Section 1 ----+ | |
-    |  |  |                 | |  | |                 | | |
-    |  |  |  +-- Link 1 --+ | |  | |  +-- Link 1 --+ | | |
-    |  |  |  +------------+ | |  | |  +------------+ | | |
-    |  |  |                 | |  | |                 | | |
-    |  |  |  +-- Link 2 --+ | |  | |  +-- Link 2 --+ | | |
-    |  |  |  +------------+ | |  | |  +------------+ | | |
-    |  |  |                 | |  | |                 | | |
-    |  |  +-----------------+ |  | +-----------------+ | |
-    |  |                      |  |                     | |
-    |  +----------------------+  +---------------------+ |
-    |                                                    |
-    +----------------------------------------------------+
+    +-- Doormat -----------------------------------------------------------------------+
+    |                                                                                  |
+    |  +-- Column 1 ----------+  +-- Column 2----------+  +-- Column 3 -------------+  |
+    |  |                      |  |                     |  |                         |  |
+    |  |  +-- Section 1 ----+ |  | +-- Section 1 ----+ |  | +-- Section 1 --------+ |  |
+    |  |  |                 | |  | |                 | |  | |                     | |  |
+    |  |  |  +-- Link 1 --+ | |  | |  +-- Link 1 --+ | |  | |  +-- Document 1 --+ | |  |
+    |  |  |  +------------+ | |  | |  +------------+ | |  | |  |                | | |  |
+    |  |  |                 | |  | |                 | |  | |  | (Contact info) | | |  |
+    |  |  |  +-- Link 2 --+ | |  | |  +-- Link 2 --+ | |  | |  |                | | |  |
+    |  |  |  +------------+ | |  | |  +------------+ | |  | |  +----------------+ | |  |
+    |  |  |                 | |  | |                 | |  | |                     | |  |
+    |  |  +-----------------+ |  | +-----------------+ |  | +---------------------+ |  |
+    |  |                      |  |                     |  |                         |  |
+    |  +----------------------+  +---------------------+  +-------------------------+  |
+    |                                                                                  |
+    +----------------------------------------------------------------------------------+
+
+In fact, you can add more than one section, they will be displayed below each
+other. In each section, you can mix internal links, external links and
+Documents.
 
 And in real life: 
 
