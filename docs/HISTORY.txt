@@ -4,6 +4,12 @@ Changelog
 0.5 (unreleased)
 ----------------
 
+- Set global_allow=False on DoormatSection by adding tagged value in UML.
+  (agx mysteriously sets it to True by default)
+  [khink]
+
+- Developer documentation (about using AGX)
+
 0.4 (2010-10-05)
 ----------------
 
