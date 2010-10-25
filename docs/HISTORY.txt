@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.5 (unreleased)
+0.5 (2010-10-25)
 ----------------
 
 - Set global_allow=False on DoormatSection by adding tagged value in UML.
