@@ -10,6 +10,8 @@ Changelog
 
 - Developer documentation (about using AGX)
 
+- Explicitly set `external-link` class for Link type objects.
+
 0.4 (2010-10-05)
 ----------------
 

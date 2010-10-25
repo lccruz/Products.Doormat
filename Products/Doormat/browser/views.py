@@ -26,8 +26,9 @@ class DoormatView(BrowserView):
                 'column_sections: [
                 {   'section_title': 'De Oosterpoort',
                     'section_links': [
-                        {   'link_title': 'Adres OP',
-                            'link_url': 'link.naar.adres',
+                        {   'link_title': 'Some Title',
+                            'link_url': 'http://some.whe.re',
+                            'link_class': 'external-link',
                             'content': 'html content',
                             },
                         ]
@@ -63,6 +64,7 @@ class DoormatView(BrowserView):
                     item = brain.getObject()
                     text = ''
                     url = ''
+                    link_class = ''
 
                     if brain.portal_type == 'DoormatReference':
                         linked_item = item.getInternal_link()
@@ -72,13 +74,19 @@ class DoormatView(BrowserView):
                     elif brain.portal_type == "Link":
                         # Link is an Archetypes link
                         url = brain.getRemoteUrl
+                        link_class = "external-link"
                     elif brain.portal_type == "Document":
                         text = item.getText()
                     
                     if not (text or url):
                         continue
 
-                    link_dict = {'content': text, 'link_url': url, 'link_title': title}
+                    link_dict = {
+                        'content': text, 
+                        'link_url': url, 
+                        'link_title': title,
+                        'link_class': link_class,
+                        }
                     section_links.append(link_dict)
                 section_dict['section_links'] = section_links
                 column_sections.append(section_dict)
