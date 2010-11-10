@@ -4,6 +4,8 @@ Changelog
 0.6 (unreleased)
 ----------------
 
+- Ability to style doormat columns by position.
+  [malthe]
 
 0.5 (2010-10-25)
 ----------------

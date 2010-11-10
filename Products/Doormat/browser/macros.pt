@@ -17,8 +17,8 @@
       >
     [Doormat title]
   </h2>
-  <div class="doormatColumn" 
-      tal:repeat="column doormat_data">
+  <div tal:attributes="class string:doormatColumn column-${repeat/column/index}"
+       tal:repeat="column doormat_data">
     <h3 tal:condition="column/show_title"
         tal:content="column/column_title">
       [Column title]
