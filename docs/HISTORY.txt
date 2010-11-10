@@ -7,6 +7,10 @@ Changelog
 - Ability to style doormat columns by position.
   [malthe]
 
+- Don't use the catalog, traverse using objectValues()
+  https://dev.plone.org/plone/ticket/11265
+  [khink]
+
 0.5 (2010-10-25)
 ----------------
 

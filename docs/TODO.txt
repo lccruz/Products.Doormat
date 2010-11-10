@@ -1,10 +1,6 @@
 To do
 =====
 
-* don't use the catalog, just traverse using objectValues()
-  https://dev.plone.org/plone/ticket/11265
-  [malthe]
-
 * Remove instances of content types on uninstall.
 
 * Add some sort of caching for getDoormatData and getDoormatTitle methods, or

@@ -40,42 +40,41 @@ class DoormatView(BrowserView):
         doormat = self.context
         data = []
         # Fetch Columns
-        for column_brain in doormat.getFolderContents():
+        for column in doormat.objectValues():
             column_dict = {
-                'column_title': column_brain.Title,
-                'show_title': column_brain.getShowTitle,
+                'column_title': column.Title(),
+                'show_title': column.getShowTitle(),
                 }
             column_sections = []
-            section_brains = column_brain.getObject().getFolderContents()
+            sections = column.objectValues()
 
             # Fetch Categories from Column
-            for section_brain in section_brains:
+            for section in sections:
                 section_dict = {
-                    'section_title': section_brain.Title,
-                    'show_title': section_brain.getShowTitle,
+                    'section_title': section.Title(),
+                    'show_title': section.getShowTitle(),
                     }
                 section_links = []
-                brains = section_brain.getObject().getFolderContents()
+                objs = section.objectValues()
 
                 # Loop over all link object in category
-                for brain in brains:
+                for item in objs:
                     # Use the link item's title, not that of the linked content
-                    title = brain.Title
-                    item = brain.getObject()
+                    title = item.Title()
                     text = ''
                     url = ''
                     link_class = ''
 
-                    if brain.portal_type == 'DoormatReference':
+                    if item.portal_type == 'DoormatReference':
                         linked_item = item.getInternal_link()
                         if not linked_item:
                             continue
                         url = linked_item.absolute_url()
-                    elif brain.portal_type == "Link":
+                    elif item.portal_type == "Link":
                         # Link is an Archetypes link
-                        url = brain.getRemoteUrl
+                        url = item.getRemoteUrl
                         link_class = "external-link"
-                    elif brain.portal_type == "Document":
+                    elif item.portal_type == "Document":
                         text = item.getText()
                     
                     if not (text or url):
