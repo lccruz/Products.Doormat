@@ -8,5 +8,6 @@ and run::
     make -C ../../uml/
 
 Please keep the UML model up-to-date so AGX code generation keeps working,
-unless you have good reason to do so, and please do not use older versions of AGX
-than the version it was last generated with.
+unless you have good reason to do so, and please do not use older versions of
+AGX than the version it was last generated with.
+
