@@ -54,6 +54,39 @@ plone.org_ doormat: it adds a Column, which can contain more than one Section.
 An example using this structure is the Oosterpoort_, which actually is the
 product's predecessor.
 
+Adding a Document
+=================
+
+Adding and editing a Document to the Doormat is just as simple as adding it in
+any other place. However, keep this in mind that only the "Body text" field
+will be displayed in the Doormat. Other fields, most notably the title and
+description will be omitted.
+
+Links in a Document
+-------------------
+
+By default, relative links will be created from the place where the Document
+lives. This link is then displayed in the Doormat on all pages, so it is very
+likely to be broken.
+
+The solution is to make your editor insert links by uid. With TinyMCE on Plone
+4, you can enable "link by uid" by going to the "Resource types" tab on TinyMCE
+Settings (via the "Site setup"), and checking the box called "Link using UIDs". 
+
+This will apply to the whole site. You may want to revert to the default
+setting after you've added the link, as relative links are more desirable in
+general.
+
+Adding an Image
+---------------
+
+To add an image to the Doormat, add a Document and include an image there. It's
+not possible to upload an Image to a DoormatSection, so you need to upload the
+image to another place in your site first.
+
+Make sure you enable "Link using UIDs" (see above) first, because defining the
+image's location in a relative way will break in the same way as a relative
+link will break.
 
 Simple configuration
 ====================
