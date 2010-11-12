@@ -4,6 +4,8 @@ Changelog
 0.7 (unreleased)
 ----------------
 
+- Use contentValues() instead of objectValues() (only expose CMS content)
+
 0.6 (2010-11-11)
 ----------------
 
