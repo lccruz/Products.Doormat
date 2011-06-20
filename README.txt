@@ -1,9 +1,9 @@
 Introduction
 ============
 
-A doormat is a large collection of links which are presented in a structured
+A doormat is a couple of links which are presented in a structured
 way. One example is the current plone.org_, where the div#sitemap at the bottom
-is actually an ordered collection of internal and external links, with sections
+consists of some ordered bundles of internal and external links, with sections
 called "Downloads", "Documentation", "Developers", "Plone foundation" and
 "Support". See more examples_ of doormats.
 
@@ -13,33 +13,52 @@ doormat is placed in the Plone footer. The links in the Doormat are managed as
 content, making the Doormat more flexible than a sitemap.  It's also possible
 to add external links. It's also possible to add bits of text, with markup.
 
+Quick feature overview
+======================
+
+* Internal links
+* External links
+* Text blocks (including images)
+* Links from Plone Collections
+* Can have any number of columns
+* Can have multiple sections per column
 
 Getting started
 ===============
 
 After installing the product in your site, you can add a "Doormat" item to your
 Plone site. Inside it, you can create a hierarchical structure of Columns,
-Sections, links (both internal and external), and Documents (Plone's Page type). 
+Sections, links (both internal and external), Documents (Plone's Page type),
+and Links to a Collection (DoormatCollection). 
 
 The Doormat may look like this, schematically::
 
-    +-- Doormat -----------------------------------------------------------------------+
-    |                                                                                  |
-    |  +-- Column 1 ----------+  +-- Column 2----------+  +-- Column 3 -------------+  |
-    |  |                      |  |                     |  |                         |  |
-    |  |  +-- Section 1 ----+ |  | +-- Section 1 ----+ |  | +-- Section 1 --------+ |  |
-    |  |  |                 | |  | |                 | |  | |                     | |  |
-    |  |  |  +-- Link 1 --+ | |  | |  +-- Link 1 --+ | |  | |  +-- Document 1 --+ | |  |
-    |  |  |  +------------+ | |  | |  +------------+ | |  | |  |                | | |  |
-    |  |  |                 | |  | |                 | |  | |  | (Contact info) | | |  |
-    |  |  |  +-- Link 2 --+ | |  | |  +-- Link 2 --+ | |  | |  |                | | |  |
-    |  |  |  +------------+ | |  | |  +------------+ | |  | |  +----------------+ | |  |
-    |  |  |                 | |  | |                 | |  | |                     | |  |
-    |  |  +-----------------+ |  | +-----------------+ |  | +---------------------+ |  |
-    |  |                      |  |                     |  |                         |  |
-    |  +----------------------+  +---------------------+  +-------------------------+  |
-    |                                                                                  |
-    +----------------------------------------------------------------------------------+
+    +-- Doormat ----------------------------------------------------------------------------+
+    |                                                                                       |
+    |  +-- Column 1 ----------+  +-- Column 2----------+  +-- Column 3 ------------------+  |
+    |  |                      |  |                     |  |                              |  |
+    |  |  +-- Section 1 ----+ |  | +-- Section 1 ----+ |  | +-- Section 1 -------------+ |  |
+    |  |  |                 | |  | |                 | |  | |                          | |  |
+    |  |  |  +-- Link 1 --+ | |  | |  +-- Link 1 --+ | |  | |  +-- Document 1 -------+ | |  |
+    |  |  |  +------------+ | |  | |  +------------+ | |  | |  |                     | | |  |
+    |  |  |                 | |  | |                 | |  | |  | (Contact info)      | | |  |
+    |  |  |  +-- Link 2 --+ | |  | |  +-- Link 2 --+ | |  | |  |                     | | |  |
+    |  |  |  +------------+ | |  | |  +------------+ | |  | |  +---------------------+ | |  |
+    |  |  |                 | |  | |                 | |  | |                          | |  |
+    |  |  |                 | |  | |                 | |  | |  +- DoormatCollection -+ | |  |
+    |  |  |                 | |  | |                 | |  | |  |                     | | |  |
+    |  |  |                 | |  | |                 | |  | |  | Item 1 from Collctn | | |  |
+    |  |  |                 | |  | |                 | |  | |  | Item 2 from Collctn | | |  |
+    |  |  |                 | |  | |                 | |  | |  | (...)               | | |  |
+    |  |  |                 | |  | |                 | |  | |  | Link to Collection  | | |  |
+    |  |  |                 | |  | |                 | |  | |  |                     | | |  |
+    |  |  |                 | |  | |                 | |  | |  +---------------------| | |  |
+    |  |  |                 | |  | |                 | |  | |                          | |  |
+    |  |  +-----------------+ |  | +-----------------+ |  | +--------------------------+ |  |
+    |  |                      |  |                     |  |                              |  |
+    |  +----------------------+  +---------------------+  +------------------------------+  |
+    |                                                                                       |
+    +---------------------------------------------------------------------------------------+
 
 In fact, you can add more than one section, they will be displayed below each
 other. In each section, you can mix internal links, external links and
@@ -87,6 +106,13 @@ image to another place in your site first.
 Make sure you enable "Link using UIDs" (see above) first, because defining the
 image's location in a relative way will break in the same way as a relative
 link will break.
+
+Links to Collections
+====================
+
+It's also possible to add a "Link to Collection" item (DoormatCollection). This
+allows yout to point to a Plone Collection object, and take the items from
+that.
 
 Simple configuration
 ====================

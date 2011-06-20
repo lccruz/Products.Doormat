@@ -11,6 +11,9 @@ collections branch
 - Don't subclass DoormatCollection from DoormatMixin 
   [khink]
 
+- Add labels and description for fields, add a pointer in the documentation.
+  [khink]
+
 0.6 (2010-11-11)
 ----------------
 

@@ -48,7 +48,7 @@
 			UML 1.4
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Mon Jun 20 16:52:01 CEST 2011'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Mon Jun 20 17:03:28 CEST 2011'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.32.2(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -3321,6 +3321,20 @@
                         <UML:TagDefinition xmi.idref = 'd8173c3e-2367-5adf-9fee-a5f97447736b'/>
                       </UML:TaggedValue.type>
                     </UML:TaggedValue>
+                    <UML:TaggedValue xmi.id = '127-0-1-1--6e8b8320:130ad02cef5:-8000:0000000000000DEA'
+                      isSpecification = 'false'>
+                      <UML:TaggedValue.dataValue>&quot;Show more&quot; link</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.type>
+                        <UML:TagDefinition xmi.idref = 'e14a5cda-77c4-5e17-80f0-3ed5c7774d5e'/>
+                      </UML:TaggedValue.type>
+                    </UML:TaggedValue>
+                    <UML:TaggedValue xmi.id = '127-0-1-1--6e8b8320:130ad02cef5:-8000:0000000000000DF1'
+                      isSpecification = 'false'>
+                      <UML:TaggedValue.dataValue>Optionally, add a location for an extra link that will be displayed below the items, like a link to the collection itself.</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.type>
+                        <UML:TagDefinition xmi.idref = 'aa59fe2f-5712-5afd-bd60-2c663257820d'/>
+                      </UML:TaggedValue.type>
+                    </UML:TaggedValue>
                   </UML:ModelElement.taggedValue>
                   <UML:StructuralFeature.type>
                     <UML:DataType xmi.idref = 'e85df323-29b1-5d10-98de-7c2a1c60f9da'/>
@@ -3337,6 +3351,22 @@
                       </UML:Multiplicity.range>
                     </UML:Multiplicity>
                   </UML:StructuralFeature.multiplicity>
+                  <UML:ModelElement.taggedValue>
+                    <UML:TaggedValue xmi.id = '127-0-1-1--6e8b8320:130ad02cef5:-8000:0000000000000DEB'
+                      isSpecification = 'false'>
+                      <UML:TaggedValue.dataValue>&quot;Show more&quot; text</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.type>
+                        <UML:TagDefinition xmi.idref = 'e14a5cda-77c4-5e17-80f0-3ed5c7774d5e'/>
+                      </UML:TaggedValue.type>
+                    </UML:TaggedValue>
+                    <UML:TaggedValue xmi.id = '127-0-1-1--6e8b8320:130ad02cef5:-8000:0000000000000DF0'
+                      isSpecification = 'false'>
+                      <UML:TaggedValue.dataValue>The text for the &quot;Show more&quot; link.</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.type>
+                        <UML:TagDefinition xmi.idref = 'aa59fe2f-5712-5afd-bd60-2c663257820d'/>
+                      </UML:TaggedValue.type>
+                    </UML:TaggedValue>
+                  </UML:ModelElement.taggedValue>
                   <UML:StructuralFeature.type>
                     <UML:DataType xmi.idref = '9627e80f-cde2-5780-9619-55e71d92d8ea'/>
                   </UML:StructuralFeature.type>
@@ -3352,6 +3382,22 @@
                       </UML:Multiplicity.range>
                     </UML:Multiplicity>
                   </UML:StructuralFeature.multiplicity>
+                  <UML:ModelElement.taggedValue>
+                    <UML:TaggedValue xmi.id = '127-0-1-1--6e8b8320:130ad02cef5:-8000:0000000000000DEC'
+                      isSpecification = 'false'>
+                      <UML:TaggedValue.dataValue>Limit number of items</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.type>
+                        <UML:TagDefinition xmi.idref = 'e14a5cda-77c4-5e17-80f0-3ed5c7774d5e'/>
+                      </UML:TaggedValue.type>
+                    </UML:TaggedValue>
+                    <UML:TaggedValue xmi.id = '127-0-1-1--6e8b8320:130ad02cef5:-8000:0000000000000DEF'
+                      isSpecification = 'false'>
+                      <UML:TaggedValue.dataValue>Maximum number of items to be shown, leave blank for all items.</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.type>
+                        <UML:TagDefinition xmi.idref = 'aa59fe2f-5712-5afd-bd60-2c663257820d'/>
+                      </UML:TaggedValue.type>
+                    </UML:TaggedValue>
+                  </UML:ModelElement.taggedValue>
                   <UML:StructuralFeature.type>
                     <UML:DataType xmi.idref = 'e12f147a-d786-5cd7-a838-1bd9f02fdbf4'/>
                   </UML:StructuralFeature.type>
@@ -3367,6 +3413,22 @@
                       </UML:Multiplicity.range>
                     </UML:Multiplicity>
                   </UML:StructuralFeature.multiplicity>
+                  <UML:ModelElement.taggedValue>
+                    <UML:TaggedValue xmi.id = '127-0-1-1--6e8b8320:130ad02cef5:-8000:0000000000000DED'
+                      isSpecification = 'false'>
+                      <UML:TaggedValue.dataValue>Show time</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.type>
+                        <UML:TagDefinition xmi.idref = 'e14a5cda-77c4-5e17-80f0-3ed5c7774d5e'/>
+                      </UML:TaggedValue.type>
+                    </UML:TaggedValue>
+                    <UML:TaggedValue xmi.id = '127-0-1-1--6e8b8320:130ad02cef5:-8000:0000000000000DEE'
+                      isSpecification = 'false'>
+                      <UML:TaggedValue.dataValue>Show the item&apos;s last modification time</UML:TaggedValue.dataValue>
+                      <UML:TaggedValue.type>
+                        <UML:TagDefinition xmi.idref = 'aa59fe2f-5712-5afd-bd60-2c663257820d'/>
+                      </UML:TaggedValue.type>
+                    </UML:TaggedValue>
+                  </UML:ModelElement.taggedValue>
                   <UML:StructuralFeature.type>
                     <UML:DataType xmi.idref = '16a8d020-4c0a-58ce-993f-e6306abf0bbf'/>
                   </UML:StructuralFeature.type>
@@ -5080,7 +5142,7 @@
     </path>
   </group>
   <group name="Fig16"
-       description="org.argouml.uml.diagram.static_structure.ui.FigClass[544, 280, 182, 133]pathVisible=true;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
+       description="org.argouml.uml.diagram.static_structure.ui.FigClass[528, 264, 182, 133]pathVisible=true;stereotypeView=0;operationsVisible=true;attributesVisible=true;"
        href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
        fill="1"
        fillcolor="white"
@@ -5092,8 +5154,8 @@
     </private>
     
     <rectangle name="Fig16.0"
-      x="544"
-      y="280"
+      x="528"
+      y="264"
       width="182"
       height="133"
       fill="1"
@@ -5102,8 +5164,8 @@
       strokecolor="black"
     />
     <text name="Fig16.1"
-      x="545"
-      y="281"
+      x="529"
+      y="265"
       width="180"
       height="22"
       fill="0"
@@ -5118,7 +5180,7 @@
       justification="Center"
     >content::DoormatCollection</text>
     <group name="Fig16.2"
-         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[545, 281, 180, 0]"
+         description="org.argouml.uml.diagram.ui.FigStereotypesGroup[529, 265, 180, 0]"
          href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
          fill="0"
          fillcolor="white"
@@ -5130,8 +5192,8 @@
       </private>
       
       <rectangle name="Fig16.2.0"
-        x="545"
-        y="281"
+        x="529"
+        y="265"
         width="180"
         height="0"
         fill="0"
@@ -5141,8 +5203,8 @@
       />
     </group>
     <rectangle name="Fig16.3"
-      x="544"
-      y="303"
+      x="528"
+      y="287"
       width="182"
       height="1"
       fill="1"
@@ -5151,7 +5213,7 @@
       strokecolor="black"
     />
     <group name="Fig16.4"
-         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[545, 304, 180, 88]"
+         description="org.argouml.uml.diagram.ui.FigAttributesCompartment[529, 288, 180, 88]"
          href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
          fill="0"
          fillcolor="white"
@@ -5162,8 +5224,8 @@
       </private>
       
       <rectangle name="Fig16.4.0"
-        x="545"
-        y="304"
+        x="529"
+        y="288"
         width="180"
         height="88"
         fill="0"
@@ -5172,8 +5234,8 @@
         strokecolor="black"
       />
       <text name="Fig16.4.1"
-        x="545"
-        y="304"
+        x="529"
+        y="288"
         width="180"
         height="16"
         fill="0"
@@ -5188,8 +5250,8 @@
         justification="Left"
       >collection : reference</text>
       <text name="Fig16.4.2"
-        x="545"
-        y="320"
+        x="529"
+        y="304"
         width="180"
         height="16"
         fill="0"
@@ -5204,8 +5266,8 @@
         justification="Left"
       >showMoreLink : reference</text>
       <text name="Fig16.4.3"
-        x="545"
-        y="336"
+        x="529"
+        y="320"
         width="180"
         height="16"
         fill="0"
@@ -5220,8 +5282,8 @@
         justification="Left"
       >showMoreText : string</text>
       <text name="Fig16.4.4"
-        x="545"
-        y="352"
+        x="529"
+        y="336"
         width="180"
         height="16"
         fill="0"
@@ -5236,8 +5298,8 @@
         justification="Left"
       >limit : int</text>
       <text name="Fig16.4.5"
-        x="545"
-        y="368"
+        x="529"
+        y="352"
         width="180"
         height="22"
         fill="0"
@@ -5253,8 +5315,8 @@
       >showTime : boolean</text>
     </group>
     <rectangle name="Fig16.5"
-      x="544"
-      y="391"
+      x="528"
+      y="375"
       width="182"
       height="1"
       fill="1"
@@ -5263,7 +5325,7 @@
       strokecolor="black"
     />
     <group name="Fig16.6"
-         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[545, 392, 180, 21]"
+         description="org.argouml.uml.diagram.ui.FigOperationsCompartment[529, 376, 180, 21]"
          href="-64--88--72-113-37f439a7:12edccb3896:-8000:0000000000000DBD"
          fill="0"
          fillcolor="white"
@@ -5274,8 +5336,8 @@
       </private>
       
       <rectangle name="Fig16.6.0"
-        x="545"
-        y="392"
+        x="529"
+        y="376"
         width="180"
         height="21"
         fill="0"
@@ -5339,7 +5401,7 @@
       <moveto x="663"
               y="149" />
       <lineto x="663"
-              y="280" />
+              y="264" />
     </path>
   </group>
 </pgml>
