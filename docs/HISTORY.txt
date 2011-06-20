@@ -1,6 +1,16 @@
 Changelog
 =========
 
+collections branch
+------------------
+
+- Add "DoormatCollection" type, which takes links from a Collection. 
+  Code supplied by Alessandro Vermeulen at
+  https://github.com/spockz/Products.Doormat.
+
+- Don't subclass DoormatCollection from DoormatMixin 
+  [khink]
+
 0.6 (2010-11-11)
 ----------------
 
