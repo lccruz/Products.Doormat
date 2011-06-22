@@ -1,10 +1,9 @@
-from plone.memoize.instance import memoize
+from zope.component import getMultiAdapter
+from zope.interface import implements
 
-from zope import interface
-from zope import component
+from plone.memoize.instance import memoize
 from Products.CMFPlone import utils
 from Products.Five import BrowserView
-from zope.interface import implements
 from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 
 class DoormatView(BrowserView):
@@ -76,7 +75,41 @@ class DoormatView(BrowserView):
                         link_class = "external-link"
                     elif item.portal_type == "Document":
                         text = item.getText()
-                    
+                    elif item.portal_type == "DoormatCollection":
+                        if item.getCollection().portal_type == "Topic":
+                          results = self.getCollection(item)
+                      
+                          # Add links from collections
+                          for nitem in results:
+                              obj = nitem.getObject() 
+                            
+                              if (item.showTime):
+                                title = self.localizedTime(obj.modified()) + ' - ' + obj.title
+                              else: 
+                                title = obj.title
+                            
+                            
+                              section_links.append({
+                                  'content': '', 
+                                  'link_url': obj.absolute_url(), 
+                                  'link_title': title,
+                                  'link_class': 'collection-item',
+                                  })
+                         
+                          # Add the read more link if it is specified 
+                          if item.getShowMoreLink():
+                              section_links.append({
+                                  'content': '',
+                                  'link_url': item.getShowMoreLink().absolute_url(),
+                                  'link_title': item.showMoreText,
+                                  'link_class': 'read-more'
+                              })  
+                        
+                          continue
+                        else:
+                          url = ''
+                          text = item.id+': This is not a collection, but a ' + item.getCollection().portal_type + ' :-)'
+                             
                     if not (text or url):
                         continue
 
@@ -93,6 +126,16 @@ class DoormatView(BrowserView):
             data.append(column_dict)
         return data
 
+    def getCollection(self, item):
+      if item.limit > 0:
+        results = item.getCollection().queryCatalog(sort_limit=item.limit)[:item.limit]
+      else:
+        results = item.getCollection().queryCatalog()
+        
+      return results
+      
+    def localizedTime(self, time):
+      return getMultiAdapter((self.context, self.request), name="plone").toLocalizedTime(time)  
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
 
