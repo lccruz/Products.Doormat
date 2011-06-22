@@ -1,7 +1,10 @@
 Changelog
 =========
 
-0.7 (unreleased)
+0.8 (unreleased)
+----------------
+
+0.7 (2011-06-22)
 ----------------
 
 Merged collections branch.
@@ -13,6 +16,9 @@ Merged collections branch.
   [khink]
 
 - Add labels and description for fields, add a pointer in the documentation.
+  [khink]
+
+- contentValues() instead of objectValues() (only expose CMS content)
   [khink]
 
 0.6 (2010-11-11)
