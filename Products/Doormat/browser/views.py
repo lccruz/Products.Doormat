@@ -39,13 +39,13 @@ class DoormatView(BrowserView):
         doormat = self.context
         data = []
         # Fetch Columns
-        for column in doormat.contentValues():
+        for column in doormat.listFolderContents():
             column_dict = {
                 'column_title': column.Title(),
                 'show_title': column.getShowTitle(),
                 }
             column_sections = []
-            sections = column.contentValues()
+            sections = column.listFolderContents()
 
             # Fetch Categories from Column
             for section in sections:
@@ -54,7 +54,7 @@ class DoormatView(BrowserView):
                     'show_title': section.getShowTitle(),
                     }
                 section_links = []
-                objs = section.contentValues()
+                objs = section.listFolderContents()
 
                 # Loop over all link object in category
                 for item in objs:
