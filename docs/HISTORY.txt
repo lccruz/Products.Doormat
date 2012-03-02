@@ -4,6 +4,10 @@ Changelog
 0.8 (unreleased)
 ----------------
 
+- Search for doormats only in the navigation root.  This allows to
+  have a different doormat (or no doormat) in parts of the site.
+  [maurits]
+
 0.7 (2011-06-22)
 ----------------
 

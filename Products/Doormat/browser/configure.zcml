@@ -34,6 +34,7 @@
   <browser:viewlet
       name="doormat.footer"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".views.DoormatViewlet"
       template="doormat_viewlet.pt"
       permission="zope2.View"
       layer=".interfaces.IDoormatLayer" 
@@ -42,6 +43,7 @@
  <browser:viewlet
       name="doormat.footer.bare"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".views.DoormatViewlet"
       template="doormat_viewlet_bare.pt"
       permission="zope2.View"
       layer=".interfaces.IDoormatLayer" 

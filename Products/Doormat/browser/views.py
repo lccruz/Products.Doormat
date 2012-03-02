@@ -1,5 +1,8 @@
+from Acquisition import aq_inner
+from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 from zope.component import getMultiAdapter
+from plone.app.layout.viewlets.common import ViewletBase
 
 
 class DoormatView(BrowserView):
@@ -138,6 +141,30 @@ class DoormatView(BrowserView):
     def localizedTime(self, time):
         return getMultiAdapter(
             (self.context, self.request), name="plone").toLocalizedTime(time)
+
+
+class DoormatViewlet(ViewletBase):
+
+    def available(self):
+        return self.doormat is not None
+
+    @property
+    def doormat(self):
+        context = aq_inner(self.context)
+        cat = getToolByName(context, 'portal_catalog')
+        portal_state = getMultiAdapter((self.context, self.request),
+                                       name=u'plone_portal_state')
+        navigation_root_path = portal_state.navigation_root_path()
+        # First try to find a doormat within the navigation root.
+        doormats = cat(portal_type='Doormat', path=navigation_root_path,
+                       sort_on='created')
+        if doormats:
+            return doormats[0].getObject()
+        # #Optionally we could then try to find a doormat anywhere.
+        # doormats = cat(portal_type='Doormat', sort_on='created')
+        # if doormats:
+        #    return doormats[0].getObject()
+
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
