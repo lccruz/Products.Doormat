@@ -4,6 +4,26 @@ from Products.Five import BrowserView
 from zope.component import getMultiAdapter
 from plone.app.layout.viewlets.common import ViewletBase
 
+import pkg_resources
+try:
+    pkg_resources.get_distribution('plone.app.collection')
+except pkg_resources.DistributionNotFound:
+    HAS_COLLECTIONS = False
+else:
+    HAS_COLLECTIONS = True
+    from plone.app.collection.interfaces import ICollection
+
+try:
+    pkg_resources.get_distribution('plone.app.contenttypes>=1.0b2')
+except pkg_resources.VersionConflict:
+    # older versions don't have the dx-based-collections
+    HAS_PAC = False
+except pkg_resources.DistributionNotFound:
+    HAS_PAC = False
+else:
+    HAS_PAC = True
+    from plone.app.contentypes.interfaces import ICollection as IDXCollection
+
 
 class DoormatView(BrowserView):
     """
@@ -69,13 +89,52 @@ class DoormatView(BrowserView):
                             continue
                         url = linked_item.absolute_url()
                     elif item.portal_type == "Link":
-                        # Link is an Archetypes link
-                        url = item.getRemoteUrl
+                        if item.meta_type.startswith('Dexterity'):
+                            # A Dexterity-link
+                            url = item.remoteUrl
+                        else:
+                            # Link is an Archetypes link
+                            url = item.getRemoteUrl
                         link_class = "external-link"
                     elif item.portal_type == "Document":
-                        text = item.getText()
+                        if item.meta_type.startswith('Dexterity'):
+                            # A Dexterity-link
+                            text = item.text.output
+                        else:
+                            text = item.getText()
                     elif item.portal_type == "DoormatCollection":
                         if item.getCollection().portal_type == "Topic":
+                            results = self.getCollection(item)
+
+                            # Add links from collections
+                            for nitem in results:
+                                obj = nitem.getObject()
+
+                                if (item.showTime):
+                                    title = self.localizedTime(obj.modified())\
+                                        + ' - ' + obj.title
+                                else:
+                                    title = obj.title
+
+                                section_links.append({
+                                    'content': '',
+                                    'link_url': obj.absolute_url(),
+                                    'link_title': title,
+                                    'link_class': 'collection-item',
+                                    })
+
+                            # Add the read more link if it is specified
+                            if item.getShowMoreLink():
+                                section_links.append({
+                                    'content': '',
+                                    'link_url': item.getShowMoreLink(
+                                        ).absolute_url(),
+                                    'link_title': item.showMoreText,
+                                    'link_class': 'read-more'
+                                })
+
+                            continue
+                        elif item.getCollection().portal_type == "Collection":
                             results = self.getCollection(item)
 
                             # Add links from collections
@@ -130,11 +189,15 @@ class DoormatView(BrowserView):
         return data
 
     def getCollection(self, item):
+        col = item.getCollection()
         if item.limit > 0:
-            results = item.getCollection().queryCatalog(
-                sort_limit=item.limit)[:item.limit]
+            if HAS_COLLECTIONS and ICollection.providedBy(col) or \
+                    HAS_PAC and IDXCollection.providedBy(col):
+                results = col.queryCatalog(b_size=item.limit)
+            else:
+                results = col.queryCatalog(sort_limit=item.limit)[:item.limit]
         else:
-            results = item.getCollection().queryCatalog()
+            results = col.getCollection().queryCatalog()
 
         return results
 

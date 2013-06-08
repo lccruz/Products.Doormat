@@ -14,6 +14,7 @@ __docformat__ = 'plaintext'
 
 from AccessControl import ClassSecurityInfo
 from Products.Archetypes.atapi import *
+from Products.ATContentTypes.content.base import ATCTContent
 from zope.interface import implements
 import interfaces
 
@@ -51,7 +52,7 @@ DoormatReference_schema = BaseSchema.copy() + \
 ##code-section after-schema #fill in your manual code here
 ##/code-section after-schema
 
-class DoormatReference(BaseContent, BrowserDefaultMixin):
+class DoormatReference(ATCTContent, BrowserDefaultMixin):
     """
     """
     security = ClassSecurityInfo()
@@ -74,4 +75,3 @@ registerType(DoormatReference, PROJECTNAME)
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-

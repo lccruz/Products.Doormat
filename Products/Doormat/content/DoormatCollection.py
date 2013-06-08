@@ -14,6 +14,7 @@ __docformat__ = 'plaintext'
 
 from AccessControl import ClassSecurityInfo
 from Products.Archetypes.atapi import *
+from Products.ATContentTypes.content.base import ATCTContent
 from zope.interface import implements
 import interfaces
 
@@ -25,7 +26,6 @@ from Products.Doormat.config import *
 from archetypes.referencebrowserwidget.widget import ReferenceBrowserWidget
 
 ##code-section module-header #fill in your manual code here
-from zope import schema
 
 ##/code-section module-header
 
@@ -38,7 +38,7 @@ schema = Schema((
             label_msgid='Doormat_label_collection',
             i18n_domain='Doormat',
         ),
-        allowed_types="('Topic')",
+        allowed_types="('Topic', 'Collection')",
         relationship="internally_references_to_collection",
     ),
     ReferenceField(
@@ -95,7 +95,7 @@ DoormatCollection_schema = BaseSchema.copy() + \
 ##code-section after-schema #fill in your manual code here
 ##/code-section after-schema
 
-class DoormatCollection(BaseContent, BrowserDefaultMixin):
+class DoormatCollection(ATCTContent, BrowserDefaultMixin):
     """
     """
     security = ClassSecurityInfo()
@@ -118,4 +118,3 @@ registerType(DoormatCollection, PROJECTNAME)
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-
