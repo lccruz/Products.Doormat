@@ -4,6 +4,13 @@ Changelog
 0.8 (unreleased)
 ----------------
 
+- Use archetypes.referencebrowserwidget in the DoormatReference if
+  available.  Note: archetypes.referencebrowserwidget 2.4.15 and
+  2.4.16 broke non-multi reference selection, so if your Plone version
+  uses one of those versions, you should edit your buildout to use a
+  newer version.
+  [maurits]
+
 - Moved to github: https://github.com/collective/Products.doormat
   [maurits]
 

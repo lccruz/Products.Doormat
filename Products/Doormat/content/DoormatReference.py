@@ -23,7 +23,11 @@ from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 from Products.Doormat.config import *
 
 # additional imports from tagged value 'import'
-from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget
+try:
+    from archetypes.referencebrowserwidget import ReferenceBrowserWidget
+except ImportError:
+    # BBB for Plone 3 and earlier.
+    from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget
 
 ##code-section module-header #fill in your manual code here
 ##/code-section module-header
