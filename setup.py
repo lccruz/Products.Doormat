@@ -34,6 +34,9 @@ setup(name='Products.Doormat',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
+      # If you really need to add local stuff and want to use paster
+      # for it, you can uncomment these lines and run 'python
+      # setup.py' again:
+      #setup_requires=["PasteScript"],
+      #paster_plugins=["ZopeSkel"],
       )
