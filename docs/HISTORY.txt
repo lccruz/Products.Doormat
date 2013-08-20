@@ -4,6 +4,9 @@ Changelog
 0.8 (unreleased)
 ----------------
 
+- Moved to github: https://github.com/collective/Products.doormat
+  [maurits]
+
 - Make compatible with Dexterity and new collections
   [pbauer]
 
