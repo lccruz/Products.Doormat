@@ -7,7 +7,7 @@ setup(name='Products.Doormat',
       version=version,
       description="Adds a doormat viewlet and installs it in the Plone footer.  The links and text in the doormat are manageable as content.",
       long_description=(open("README.txt").read() + "\n" +
-                        open(os.path.join("docs", "HISTORY.txt")).read() +
+                        open("CHANGES.rst").read() +
                         open(os.path.join("docs", "DEVELOPERS.txt")).read() +
                         open(os.path.join("docs", "TODO.txt")).read()),
       # Get more strings from
