@@ -15,13 +15,13 @@
  <object name="doormat_templates"
          meta_type="Filesystem Directory View"
          directory="Doormat/skins/doormat_templates"/>
- 
+
  <skin-path name="*">
-  <layer insert-after="custom" 
+  <layer insert-after="custom"
          name="doormat_images"/>
-  <layer insert-after="custom" 
+  <layer insert-after="custom"
          name="doormat_styles"/>
-  <layer insert-after="custom" 
+  <layer insert-after="custom"
          name="doormat_templates"/>
  </skin-path>
 

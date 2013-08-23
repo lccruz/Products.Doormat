@@ -28,15 +28,15 @@
           tal:condition="section/show_title"
           tal:content="section/section_title">[title for section]</dt>
       <dd class="doormatSectionBody" tal:repeat="link section/section_links">
-        <a tal:condition="python: link.get('link_url', None)" 
+        <a tal:condition="python: link.get('link_url', None)"
             tal:attributes="
               href link/link_url;
               class link/link_class;
-              " 
+              "
             tal:content="link/link_title">
           [link title]
         </a>
-        <div tal:condition="python: link.get('content', None)" 
+        <div tal:condition="python: link.get('content', None)"
             tal:replace="structure link/content">
             [content]
         </div>

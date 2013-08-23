@@ -1,4 +1,4 @@
-<configure 
+<configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:five="http://namespaces.zope.org/five"
@@ -37,7 +37,7 @@
       class=".views.DoormatViewlet"
       template="doormat_viewlet.pt"
       permission="zope2.View"
-      layer=".interfaces.IDoormatLayer" 
+      layer=".interfaces.IDoormatLayer"
       />
 
  <browser:viewlet
@@ -46,7 +46,7 @@
       class=".views.DoormatViewlet"
       template="doormat_viewlet_bare.pt"
       permission="zope2.View"
-      layer=".interfaces.IDoormatLayer" 
+      layer=".interfaces.IDoormatLayer"
       />
 
   <browser:resourceDirectory

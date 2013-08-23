@@ -16,13 +16,13 @@
  <!-- ##code-section cssregistry.xml -->
  <stylesheet title=""
     id="++resource++Products.Doormat.stylesheets/doormat.css"
-    media="screen" 
-    rel="stylesheet" 
+    media="screen"
+    rel="stylesheet"
     rendering="import"
-    cacheable="True" 
-    compression="safe" 
+    cacheable="True"
+    compression="safe"
     cookable="False"
-    enabled="1" 
+    enabled="1"
     expression=""
     />
 
