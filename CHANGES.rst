@@ -11,7 +11,7 @@ Changelog
   newer version.
   [maurits]
 
-- Moved to github: https://github.com/collective/Products.doormat
+- Moved to github: https://github.com/collective/Products.Doormat
   [maurits]
 
 - Make compatible with Dexterity and new collections
