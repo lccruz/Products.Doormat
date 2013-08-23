@@ -50,6 +50,7 @@ DoormatMixin_schema = BaseSchema.copy() + \
 ##code-section after-schema #fill in your manual code here
 ##/code-section after-schema
 
+
 class DoormatMixin(BrowserDefaultMixin):
     """
     """
@@ -72,4 +73,3 @@ class DoormatMixin(BrowserDefaultMixin):
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-

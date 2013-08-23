@@ -25,6 +25,7 @@ from Products.Doormat.config import *
 # additional imports from tagged value 'import'
 try:
     from archetypes.referencebrowserwidget import ReferenceBrowserWidget
+    ReferenceBrowserWidget  # pyflakes
 except ImportError:
     # BBB for Plone 3 and earlier.
     from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget
@@ -55,6 +56,7 @@ DoormatReference_schema = BaseSchema.copy() + \
 
 ##code-section after-schema #fill in your manual code here
 ##/code-section after-schema
+
 
 class DoormatReference(ATCTContent, BrowserDefaultMixin):
     """

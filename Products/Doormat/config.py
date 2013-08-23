@@ -41,12 +41,12 @@ ADD_CONTENT_PERMISSIONS = {
     'DoormatCollection': 'Doormat: Add DoormatCollection',
 }
 
-setDefaultRoles('Doormat: Add Doormat', ('Manager','Owner'))
-setDefaultRoles('Doormat: Add DoormatColumn', ('Manager','Owner'))
-setDefaultRoles('Doormat: Add DoormatSection', ('Manager','Owner'))
-setDefaultRoles('Doormat: Add DoormatReference', ('Manager','Owner'))
-setDefaultRoles('Doormat: Add DoormatMixin', ('Manager','Owner'))
-setDefaultRoles('Doormat: Add DoormatCollection', ('Manager','Owner'))
+setDefaultRoles('Doormat: Add Doormat', ('Manager', 'Owner'))
+setDefaultRoles('Doormat: Add DoormatColumn', ('Manager', 'Owner'))
+setDefaultRoles('Doormat: Add DoormatSection', ('Manager', 'Owner'))
+setDefaultRoles('Doormat: Add DoormatReference', ('Manager', 'Owner'))
+setDefaultRoles('Doormat: Add DoormatMixin', ('Manager', 'Owner'))
+setDefaultRoles('Doormat: Add DoormatCollection', ('Manager', 'Owner'))
 
 product_globals = globals()
 

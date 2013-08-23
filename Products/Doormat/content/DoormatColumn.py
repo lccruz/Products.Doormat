@@ -17,7 +17,6 @@ from Products.Archetypes.atapi import *
 from zope.interface import implements
 import interfaces
 from Products.Doormat.content.DoormatMixin import DoormatMixin
-from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 
 from Products.ATContentTypes.content.folder import ATFolder
 from Products.ATContentTypes.content.folder import ATFolderSchema
@@ -42,6 +41,7 @@ DoormatColumn_schema = ATFolderSchema.copy() + \
 ##code-section after-schema #fill in your manual code here
 ##/code-section after-schema
 
+
 class DoormatColumn(ATFolder, DoormatMixin):
     """
     """
@@ -65,4 +65,3 @@ registerType(DoormatColumn, PROJECTNAME)
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-

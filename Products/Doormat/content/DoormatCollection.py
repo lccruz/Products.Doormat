@@ -95,6 +95,7 @@ DoormatCollection_schema = BaseSchema.copy() + \
 ##code-section after-schema #fill in your manual code here
 ##/code-section after-schema
 
+
 class DoormatCollection(ATCTContent, BrowserDefaultMixin):
     """
     """
