@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.8 (unreleased)
+0.8 (2013-08-23)
 ----------------
 
 - Use archetypes.referencebrowserwidget in the DoormatReference if
