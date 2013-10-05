@@ -5,7 +5,9 @@ version = '0.9.dev0'
 
 setup(name='Products.Doormat',
       version=version,
-      description="Adds a doormat viewlet and installs it in the Plone footer.  The links and text in the doormat are manageable as content.",
+      description="Adds a doormat viewlet and installs it in the Plone "
+                  "footer. The links and text in the doormat are manageable "
+                  "as content. ",
       long_description=(open("README.txt").read() + "\n" +
                         open("CHANGES.rst").read() +
                         open(os.path.join("docs", "DEVELOPERS.txt")).read() +
