@@ -4,6 +4,7 @@
   <!-- ##code-section METADATA -->
   <dependencies>
     <dependency>profile-Products.Archetypes:Archetypes</dependency>
+    <dependency>profile-archetypes.referencebrowserwidget:default</dependency>
   </dependencies>
   <!-- ##/code-section METADATA -->
 </metadata>
