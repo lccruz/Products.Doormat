@@ -3,5 +3,6 @@
   <version>0.6.20</version>
   <dependencies>
     <dependency>profile-Products.Archetypes:Archetypes</dependency>
+    <dependency>profile-archetypes.referencebrowserwidget:default</dependency>
   </dependencies>
 </metadata>
