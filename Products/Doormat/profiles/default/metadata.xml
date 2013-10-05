@@ -2,5 +2,8 @@
 <metadata>
   <version>0.6.20</version>
   <!-- ##code-section METADATA -->
+  <dependencies>
+    <dependency>profile-Products.Archetypes:Archetypes</dependency>
+  </dependencies>
   <!-- ##/code-section METADATA -->
 </metadata>

@@ -4,7 +4,8 @@ Changelog
 0.9 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Plone 5 compatibility.
+  [khink]
 
 
 0.8 (2013-08-23)
