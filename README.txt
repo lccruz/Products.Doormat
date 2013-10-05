@@ -23,13 +23,25 @@ Quick feature overview
 * Can have any number of columns
 * Can have multiple sections per column
 
+Similar products
+================
+
+collective.doormat
+------------------
+
+collective.doormat_ also lets you creates a doormat in your site, but takes a different approach: Instead of creating a structure of content objects, it offers a configuration panel where you can create the doormat in a single rich text field.
+
+This approach is a lot easier for maintaining the doormat.
+
+It doesn't take permissions into account, so links might point to internal content to which the visitor viewing the page has no access. There is also no way to add content from collections.
+
 Getting started
 ===============
 
 After installing the product in your site, you can add a "Doormat" item to your
 Plone site. Inside it, you can create a hierarchical structure of Columns,
 Sections, links (both internal and external), Documents (Plone's Page type),
-and Links to a Collection (DoormatCollection). 
+and Links to a Collection (DoormatCollection).
 
 The Doormat may look like this, schematically::
 
@@ -64,7 +76,7 @@ In fact, you can add more than one section, they will be displayed below each
 other. In each section, you can mix internal links, external links and
 Documents.
 
-And in real life: 
+And in real life:
 
 .. image:: http://plone.org/products/doormat/screenshot
 
@@ -90,7 +102,7 @@ likely to be broken.
 
 The solution is to make your editor insert links by uid. With TinyMCE on Plone
 4, you can enable "link by uid" by going to the "Resource types" tab on TinyMCE
-Settings (via the "Site setup"), and checking the box called "Link using UIDs". 
+Settings (via the "Site setup"), and checking the box called "Link using UIDs".
 
 This will apply to the whole site. You may want to revert to the default
 setting after you've added the link, as relative links are more desirable in
@@ -117,7 +129,7 @@ that.
 Simple configuration
 ====================
 
-You'll probably want to exclude the doormat object from navigation using the 
+You'll probably want to exclude the doormat object from navigation using the
 "Settings" tab. (This was not yet done when the above screenshot was taken.)
 
 There's a field `showTitle` on the folderish types (Doormat, Column and
@@ -186,3 +198,4 @@ This product was sponsored by GroningerForum_.
 .. _plone.org: http://www.plone.org
 .. _Oosterpoort: http://www.de-oosterpoort.nl
 .. _GroningerForum: http://www.groningerforum.nl
+.. _collective.doormat: http://plone.org/products/collective.doormat
