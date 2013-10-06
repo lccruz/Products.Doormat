@@ -30,11 +30,12 @@ class ProductsDoormatSetupTest(unittest.TestCase):
             IDoormatLayer in utils.registered_layers()
         )
 
-    # def test_css_registered(self):
-    #     cssreg = getattr(self.portal, 'portal_css')
-    #     stylesheets_ids = cssreg.getResourceIds()
-    #     self.assertTrue(
-    #         '++resource++collection.css' in stylesheets_ids)
+    def test_css_registered(self):
+        cssreg = getattr(self.portal, 'portal_css')
+        stylesheets_ids = cssreg.getResourceIds()
+        self.assertTrue(
+            '++resource++Products.Doormat.stylesheets/doormat.css' in
+            stylesheets_ids)
 
 
 def test_suite():
