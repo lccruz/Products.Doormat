@@ -4,7 +4,11 @@ Changelog
 0.9 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add tests (using plone.app.testing).
+  [khink]
+
+- Deprecate UML.
+  [khink]
 
 
 0.8 (2013-08-23)
