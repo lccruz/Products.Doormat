@@ -23,6 +23,19 @@ class ProductsDoormatSetupTest(unittest.TestCase):
         self.assertTrue('DoormatCollection' in self.types.objectIds())
         self.assertTrue('DoormatMixin' in self.types.objectIds())
 
+    def test_browserlayer_available(self):
+        from plone.browserlayer import utils
+        from Products.Doormat.browser.interfaces import IDoormatLayer
+        self.assertTrue(
+            IDoormatLayer in utils.registered_layers()
+        )
+
+    # def test_css_registered(self):
+    #     cssreg = getattr(self.portal, 'portal_css')
+    #     stylesheets_ids = cssreg.getResourceIds()
+    #     self.assertTrue(
+    #         '++resource++collection.css' in stylesheets_ids)
+
 
 def test_suite():
     return unittest.defaultTestLoader.loadTestsFromName(__name__)
