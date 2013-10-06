@@ -227,7 +227,3 @@ class DoormatViewlet(ViewletBase):
         # doormats = cat(portal_type='Doormat', sort_on='created')
         # if doormats:
         #    return doormats[0].getObject()
-
-
-##code-section module-footer #fill in your manual code here
-##/code-section module-footer

@@ -28,9 +28,6 @@ __author__ = """unknown <unknown>"""
 __docformat__ = 'plaintext'
 
 
-##code-section init-module-header #fill in your manual code here
-##/code-section init-module-header
-
 
 # Subpackages
 # Additional
@@ -42,6 +39,3 @@ import DoormatSection
 import DoormatReference
 import DoormatMixin
 import DoormatCollection
-
-##code-section init-module-footer #fill in your manual code here
-##/code-section init-module-footer

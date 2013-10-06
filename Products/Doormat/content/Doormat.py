@@ -22,24 +22,15 @@ from Products.ATContentTypes.content.folder import ATFolder
 from Products.ATContentTypes.content.folder import ATFolderSchema
 from Products.Doormat.config import *
 
-##code-section module-header #fill in your manual code here
-##/code-section module-header
-
 schema = Schema((
 
 
 ),
 )
 
-##code-section after-local-schema #fill in your manual code here
-##/code-section after-local-schema
-
 Doormat_schema = ATFolderSchema.copy() + \
     getattr(DoormatMixin, 'schema', Schema(())).copy() + \
     schema.copy()
-
-##code-section after-schema #fill in your manual code here
-##/code-section after-schema
 
 
 class Doormat(ATFolder, DoormatMixin):
@@ -54,14 +45,8 @@ class Doormat(ATFolder, DoormatMixin):
 
     schema = Doormat_schema
 
-    ##code-section class-header #fill in your manual code here
-    ##/code-section class-header
-
     # Methods
 
 
 registerType(Doormat, PROJECTNAME)
 # end of class Doormat
-
-##code-section module-footer #fill in your manual code here
-##/code-section module-footer

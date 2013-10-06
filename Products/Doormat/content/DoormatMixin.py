@@ -21,9 +21,6 @@ from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 
 from Products.Doormat.config import *
 
-##code-section module-header #fill in your manual code here
-##/code-section module-header
-
 schema = Schema((
 
     BooleanField(
@@ -41,14 +38,8 @@ schema = Schema((
 ),
 )
 
-##code-section after-local-schema #fill in your manual code here
-##/code-section after-local-schema
-
 DoormatMixin_schema = BaseSchema.copy() + \
     schema.copy()
-
-##code-section after-schema #fill in your manual code here
-##/code-section after-schema
 
 
 class DoormatMixin(BrowserDefaultMixin):
@@ -63,13 +54,7 @@ class DoormatMixin(BrowserDefaultMixin):
 
     schema = DoormatMixin_schema
 
-    ##code-section class-header #fill in your manual code here
-    ##/code-section class-header
-
     # Methods
 
 
 # end of class DoormatMixin
-
-##code-section module-footer #fill in your manual code here
-##/code-section module-footer

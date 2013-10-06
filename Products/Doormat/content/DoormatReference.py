@@ -30,9 +30,6 @@ except ImportError:
     # BBB for Plone 3 and earlier.
     from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget
 
-##code-section module-header #fill in your manual code here
-##/code-section module-header
-
 schema = Schema((
 
     ReferenceField(
@@ -48,14 +45,8 @@ schema = Schema((
 ),
 )
 
-##code-section after-local-schema #fill in your manual code here
-##/code-section after-local-schema
-
 DoormatReference_schema = BaseSchema.copy() + \
     schema.copy()
-
-##code-section after-schema #fill in your manual code here
-##/code-section after-schema
 
 
 class DoormatReference(ATCTContent, BrowserDefaultMixin):
@@ -70,14 +61,8 @@ class DoormatReference(ATCTContent, BrowserDefaultMixin):
 
     schema = DoormatReference_schema
 
-    ##code-section class-header #fill in your manual code here
-    ##/code-section class-header
-
     # Methods
 
 
 registerType(DoormatReference, PROJECTNAME)
 # end of class DoormatReference
-
-##code-section module-footer #fill in your manual code here
-##/code-section module-footer

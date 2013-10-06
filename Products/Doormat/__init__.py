@@ -49,14 +49,8 @@ from config import *
 DirectoryView.registerDirectory('skins', product_globals)
 
 
-##code-section custom-init-head #fill in your manual code here
-##/code-section custom-init-head
-
-
 def initialize(context):
     """initialize product (called by zope)"""
-    ##code-section custom-init-top #fill in your manual code here
-    ##/code-section custom-init-top
 
     # imports packages and types for registration
     import content
@@ -84,6 +78,3 @@ def initialize(context):
         context.registerClass(meta_type = all_ftis[i]['meta_type'],
                               constructors= (all_constructors[i],),
                               permission = ADD_CONTENT_PERMISSIONS[klassname])
-
-    ##code-section custom-init-bottom #fill in your manual code here
-    ##/code-section custom-init-bottom

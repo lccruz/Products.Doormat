@@ -13,7 +13,6 @@
              rendering="import"/>
  -->
 
- <!-- ##code-section cssregistry.xml -->
  <stylesheet title=""
     id="++resource++Products.Doormat.stylesheets/doormat.css"
     media="screen"
@@ -26,6 +25,4 @@
     expression=""
     />
 
-
- <!-- ##/code-section cssregistry.xml -->
 </object>

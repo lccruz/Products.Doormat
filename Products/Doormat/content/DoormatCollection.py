@@ -25,10 +25,6 @@ from Products.Doormat.config import *
 # additional imports from tagged value 'import'
 from archetypes.referencebrowserwidget.widget import ReferenceBrowserWidget
 
-##code-section module-header #fill in your manual code here
-
-##/code-section module-header
-
 schema = Schema((
 
     ReferenceField(
@@ -86,14 +82,8 @@ schema = Schema((
 ),
 )
 
-##code-section after-local-schema #fill in your manual code here
-##/code-section after-local-schema
-
 DoormatCollection_schema = BaseSchema.copy() + \
     schema.copy()
-
-##code-section after-schema #fill in your manual code here
-##/code-section after-schema
 
 
 class DoormatCollection(ATCTContent, BrowserDefaultMixin):
@@ -108,14 +98,8 @@ class DoormatCollection(ATCTContent, BrowserDefaultMixin):
 
     schema = DoormatCollection_schema
 
-    ##code-section class-header #fill in your manual code here
-    ##/code-section class-header
-
     # Methods
 
 
 registerType(DoormatCollection, PROJECTNAME)
 # end of class DoormatCollection
-
-##code-section module-footer #fill in your manual code here
-##/code-section module-footer
