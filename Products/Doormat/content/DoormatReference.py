@@ -1,24 +1,24 @@
 # -*- coding: utf-8 -*-
 from AccessControl import ClassSecurityInfo
-from Products.Archetypes.atapi import *
+from Products.Archetypes import atapi
 from Products.ATContentTypes.content.base import ATCTContent
 from zope.interface import implements
-import interfaces
-
 from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
+from Products.Doormat.config import PROJECTNAME
 
-from Products.Doormat.config import *
+import interfaces
 
 try:
     from archetypes.referencebrowserwidget import ReferenceBrowserWidget
     ReferenceBrowserWidget  # pyflakes
 except ImportError:
     # BBB for Plone 3 and earlier.
-    from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget
+    from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import \
+        ReferenceBrowserWidget
 
-schema = Schema((
+schema = atapi.Schema((
 
-    ReferenceField(
+    atapi.ReferenceField(
         name='internal_link',
         widget=ReferenceBrowserWidget(
             label='Internal_link',
@@ -31,7 +31,7 @@ schema = Schema((
 ),
 )
 
-DoormatReference_schema = BaseSchema.copy() + \
+DoormatReference_schema = atapi.BaseSchema.copy() + \
     schema.copy()
 
 
@@ -48,4 +48,4 @@ class DoormatReference(ATCTContent, BrowserDefaultMixin):
     schema = DoormatReference_schema
 
 
-registerType(DoormatReference, PROJECTNAME)
+atapi.registerType(DoormatReference, PROJECTNAME)

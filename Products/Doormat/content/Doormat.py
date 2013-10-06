@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 from AccessControl import ClassSecurityInfo
-from Products.Archetypes.atapi import *
-from zope.interface import implements
-import interfaces
-from Products.Doormat.content.DoormatMixin import DoormatMixin
-
 from Products.ATContentTypes.content.folder import ATFolder
 from Products.ATContentTypes.content.folder import ATFolderSchema
-from Products.Doormat.config import *
+from Products.Archetypes.atapi import Schema, registerType
+from Products.Doormat.content.DoormatMixin import DoormatMixin
+from Products.Doormat.config import PROJECTNAME
+from zope.interface import implements
+
+import interfaces
 
 schema = Schema((
 
