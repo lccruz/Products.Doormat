@@ -1,17 +1,4 @@
 # -*- coding: utf-8 -*-
-#
-# File: DoormatColumn.py
-#
-# Copyright (c) 2011 by unknown <unknown>
-# Generator: ArchGenXML Version 2.6
-#            http://plone.org/products/archgenxml
-#
-# GNU General Public License (GPL)
-#
-
-__author__ = """unknown <unknown>"""
-__docformat__ = 'plaintext'
-
 from AccessControl import ClassSecurityInfo
 from Products.Archetypes.atapi import *
 from zope.interface import implements
@@ -45,8 +32,5 @@ class DoormatColumn(ATFolder, DoormatMixin):
 
     schema = DoormatColumn_schema
 
-    # Methods
-
 
 registerType(DoormatColumn, PROJECTNAME)
-# end of class DoormatColumn

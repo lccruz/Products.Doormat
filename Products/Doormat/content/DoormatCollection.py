@@ -1,17 +1,4 @@
 # -*- coding: utf-8 -*-
-#
-# File: DoormatCollection.py
-#
-# Copyright (c) 2011 by unknown <unknown>
-# Generator: ArchGenXML Version 2.6
-#            http://plone.org/products/archgenxml
-#
-# GNU General Public License (GPL)
-#
-
-__author__ = """unknown <unknown>"""
-__docformat__ = 'plaintext'
-
 from AccessControl import ClassSecurityInfo
 from Products.Archetypes.atapi import *
 from Products.ATContentTypes.content.base import ATCTContent
@@ -22,7 +9,6 @@ from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 
 from Products.Doormat.config import *
 
-# additional imports from tagged value 'import'
 from archetypes.referencebrowserwidget.widget import ReferenceBrowserWidget
 
 schema = Schema((
@@ -98,8 +84,5 @@ class DoormatCollection(ATCTContent, BrowserDefaultMixin):
 
     schema = DoormatCollection_schema
 
-    # Methods
-
 
 registerType(DoormatCollection, PROJECTNAME)
-# end of class DoormatCollection

@@ -1,17 +1,4 @@
 # -*- coding: utf-8 -*-
-#
-# File: DoormatMixin.py
-#
-# Copyright (c) 2011 by unknown <unknown>
-# Generator: ArchGenXML Version 2.6
-#            http://plone.org/products/archgenxml
-#
-# GNU General Public License (GPL)
-#
-
-__author__ = """unknown <unknown>"""
-__docformat__ = 'plaintext'
-
 from AccessControl import ClassSecurityInfo
 from Products.Archetypes.atapi import *
 from zope.interface import implements
@@ -53,8 +40,3 @@ class DoormatMixin(BrowserDefaultMixin):
     _at_rename_after_creation = True
 
     schema = DoormatMixin_schema
-
-    # Methods
-
-
-# end of class DoormatMixin
