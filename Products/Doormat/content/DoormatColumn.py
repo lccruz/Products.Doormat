@@ -1,22 +1,22 @@
 # -*- coding: utf-8 -*-
 from AccessControl import ClassSecurityInfo
-from Products.Archetypes.atapi import *
+from Products.Archetypes import atapi
 from zope.interface import implements
 import interfaces
 from Products.Doormat.content.DoormatMixin import DoormatMixin
 
 from Products.ATContentTypes.content.folder import ATFolder
 from Products.ATContentTypes.content.folder import ATFolderSchema
-from Products.Doormat.config import *
+from Products.Doormat.config import PROJECTNAME
 
-schema = Schema((
+schema = atapi.Schema((
 
 
 ),
 )
 
 DoormatColumn_schema = ATFolderSchema.copy() + \
-    getattr(DoormatMixin, 'schema', Schema(())).copy() + \
+    getattr(DoormatMixin, 'schema', atapi.Schema(())).copy() + \
     schema.copy()
 
 
@@ -33,4 +33,4 @@ class DoormatColumn(ATFolder, DoormatMixin):
     schema = DoormatColumn_schema
 
 
-registerType(DoormatColumn, PROJECTNAME)
+atapi.registerType(DoormatColumn, PROJECTNAME)
