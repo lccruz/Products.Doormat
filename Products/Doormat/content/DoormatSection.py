@@ -1,45 +1,23 @@
 # -*- coding: utf-8 -*-
-#
-# File: DoormatSection.py
-#
-# Copyright (c) 2011 by unknown <unknown>
-# Generator: ArchGenXML Version 2.6
-#            http://plone.org/products/archgenxml
-#
-# GNU General Public License (GPL)
-#
-
-__author__ = """unknown <unknown>"""
-__docformat__ = 'plaintext'
-
 from AccessControl import ClassSecurityInfo
-from Products.Archetypes.atapi import *
-from zope.interface import implements
-import interfaces
-from Products.Doormat.content.DoormatMixin import DoormatMixin
-
 from Products.ATContentTypes.content.folder import ATFolder
 from Products.ATContentTypes.content.folder import ATFolderSchema
-from Products.Doormat.config import *
+from Products.Archetypes import atapi
+from Products.Doormat.config import PROJECTNAME
+from Products.Doormat.content.DoormatMixin import DoormatMixin
+from zope.interface import implements
 
-##code-section module-header #fill in your manual code here
-##/code-section module-header
+import interfaces
 
-schema = Schema((
+schema = atapi.Schema((
 
 
 ),
 )
 
-##code-section after-local-schema #fill in your manual code here
-##/code-section after-local-schema
-
 DoormatSection_schema = ATFolderSchema.copy() + \
-    getattr(DoormatMixin, 'schema', Schema(())).copy() + \
+    getattr(DoormatMixin, 'schema', atapi.Schema(())).copy() + \
     schema.copy()
-
-##code-section after-schema #fill in your manual code here
-##/code-section after-schema
 
 
 class DoormatSection(ATFolder, DoormatMixin):
@@ -54,14 +32,5 @@ class DoormatSection(ATFolder, DoormatMixin):
 
     schema = DoormatSection_schema
 
-    ##code-section class-header #fill in your manual code here
-    ##/code-section class-header
 
-    # Methods
-
-
-registerType(DoormatSection, PROJECTNAME)
-# end of class DoormatSection
-
-##code-section module-footer #fill in your manual code here
-##/code-section module-footer
+atapi.registerType(DoormatSection, PROJECTNAME)

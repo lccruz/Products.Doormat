@@ -1,21 +1,9 @@
 # -*- coding: utf-8 -*-
-#
-# File: setuphandlers.py
-#
-# Copyright (c) 2011 by unknown <unknown>
-# Generator: ArchGenXML Version 2.6
-#            http://plone.org/products/archgenxml
-#
-# GNU General Public License (GPL)
-#
-
-__author__ = """unknown <unknown>"""
-__docformat__ = 'plaintext'
-
+from Products.CMFCore.utils import getToolByName
 
 import logging
+
 logger = logging.getLogger('Doormat: setuphandlers')
-from Products.CMFCore.utils import getToolByName
 
 
 def isNotDoormatProfile(context):

@@ -5,9 +5,6 @@
 
   <include package="Products.GenericSetup" file="meta.zcml" />
 
-  <!-- ##code-section profiles.zcml-top #fill in your manual code here -->
-  <!-- ##/code-section profiles.zcml-top -->
-
   <genericsetup:registerProfile
       name="default"
       title="Doormat"
@@ -16,7 +13,6 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
-  <!-- ##code-section profiles.zcml-bottom #fill in your manual code here -->
   <genericsetup:registerProfile
       name="uninstall"
       title="Doormat Uninstall Profile"
@@ -24,6 +20,5 @@
       description="Removes Doormat."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  <!-- ##/code-section profiles.zcml-bottom -->
 
 </configure>

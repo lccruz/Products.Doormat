@@ -1,41 +1,24 @@
 # -*- coding: utf-8 -*-
-#
-# File: DoormatReference.py
-#
-# Copyright (c) 2011 by unknown <unknown>
-# Generator: ArchGenXML Version 2.6
-#            http://plone.org/products/archgenxml
-#
-# GNU General Public License (GPL)
-#
-
-__author__ = """unknown <unknown>"""
-__docformat__ = 'plaintext'
-
 from AccessControl import ClassSecurityInfo
-from Products.Archetypes.atapi import *
+from Products.Archetypes import atapi
 from Products.ATContentTypes.content.base import ATCTContent
 from zope.interface import implements
+from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
+from Products.Doormat.config import PROJECTNAME
+
 import interfaces
 
-from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
-
-from Products.Doormat.config import *
-
-# additional imports from tagged value 'import'
 try:
     from archetypes.referencebrowserwidget import ReferenceBrowserWidget
     ReferenceBrowserWidget  # pyflakes
 except ImportError:
     # BBB for Plone 3 and earlier.
-    from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget
+    from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import \
+        ReferenceBrowserWidget
 
-##code-section module-header #fill in your manual code here
-##/code-section module-header
+schema = atapi.Schema((
 
-schema = Schema((
-
-    ReferenceField(
+    atapi.ReferenceField(
         name='internal_link',
         widget=ReferenceBrowserWidget(
             label='Internal_link',
@@ -48,14 +31,8 @@ schema = Schema((
 ),
 )
 
-##code-section after-local-schema #fill in your manual code here
-##/code-section after-local-schema
-
-DoormatReference_schema = BaseSchema.copy() + \
+DoormatReference_schema = atapi.BaseSchema.copy() + \
     schema.copy()
-
-##code-section after-schema #fill in your manual code here
-##/code-section after-schema
 
 
 class DoormatReference(ATCTContent, BrowserDefaultMixin):
@@ -70,14 +47,5 @@ class DoormatReference(ATCTContent, BrowserDefaultMixin):
 
     schema = DoormatReference_schema
 
-    ##code-section class-header #fill in your manual code here
-    ##/code-section class-header
 
-    # Methods
-
-
-registerType(DoormatReference, PROJECTNAME)
-# end of class DoormatReference
-
-##code-section module-footer #fill in your manual code here
-##/code-section module-footer
+atapi.registerType(DoormatReference, PROJECTNAME)
