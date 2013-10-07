@@ -31,9 +31,3 @@ DEPENDENCIES = []
 # Dependend products - not quick-installed - used in testcase
 # override in custom configuration
 PRODUCT_DEPENDENCIES = []
-
-# Load custom configuration not managed by archgenxml
-try:
-    from Products.Doormat.AppConfig import *
-except ImportError:
-    pass
