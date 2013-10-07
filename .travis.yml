@@ -1,0 +1,7 @@
+language: python
+python: "2.7"
+install:
+  - mkdir -p buildout-cache/downloads
+  - python bootstrap.py -c
+  - bin/buildout -N -t 3 -c
+script: bin/test
