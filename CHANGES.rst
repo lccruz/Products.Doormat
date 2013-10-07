@@ -4,7 +4,7 @@ Changelog
 0.9 (unreleased)
 ----------------
 
-- Add tests (using plone.app.testing).
+- Add tests (using plone.app.testing) and use Travis.
   [khink]
 
 - Deprecate UML.
