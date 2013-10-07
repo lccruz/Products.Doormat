@@ -1,3 +1,5 @@
+.. image:: https://travis-ci.org/collective/Products.Doormat.png
+
 Introduction
 ============
 
