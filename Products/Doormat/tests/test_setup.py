@@ -37,6 +37,9 @@ class ProductsDoormatSetupTest(unittest.TestCase):
             '++resource++Products.Doormat.stylesheets/doormat.css' in
             stylesheets_ids)
 
+    def test_default_content_created(self):
+        self.assertTrue('doormat' in self.portal.objectIds())
+
 
 def test_suite():
     return unittest.defaultTestLoader.loadTestsFromName(__name__)

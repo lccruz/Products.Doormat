@@ -22,6 +22,7 @@ class ProductsDoormatLayer(PloneSandboxLayer):
             Products.Doormat,
             context=configurationContext
         )
+        z2.installProduct(app, 'Products.Doormat')
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'Products.Doormat:default')
@@ -41,7 +42,7 @@ class ProductsDoormatLayer(PloneSandboxLayer):
 
 PRODUCTS_DOORMAT_FIXTURE = ProductsDoormatLayer()
 PRODUCTS_DOORMAT_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(PRODUCTS_DOORMAT_FIXTURE,),
+    bases=(PRODUCTS_DOORMAT_FIXTURE, ),
     name="ProductsDoormatLayer:Integration"
 )
 PRODUCTS_DOORMAT_FUNCTIONAL_TESTING = FunctionalTesting(
