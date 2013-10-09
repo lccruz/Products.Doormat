@@ -40,8 +40,9 @@ It doesn't take permissions into account, so links might point to internal conte
 Getting started
 ===============
 
-After installing the product in your site, you can add a "Doormat" item to your
-Plone site. Inside it, you can create a hierarchical structure of Columns,
+After installing the product in your site, you should have a "Doormat" item in
+your Plone site, which should show up in the folder contents of the site.
+Inside it, you can create a hierarchical structure of Columns,
 Sections, links (both internal and external), Documents (Plone's Page type),
 and Links to a Collection (DoormatCollection).
 
@@ -131,8 +132,7 @@ that.
 Simple configuration
 ====================
 
-You'll probably want to exclude the doormat object from navigation using the
-"Settings" tab. (This was not yet done when the above screenshot was taken.)
+By default, the Doormat is excluded from navigation.
 
 There's a field `showTitle` on the folderish types (Doormat, Column and
 Section) which allows content managers to decide if the item's title should be

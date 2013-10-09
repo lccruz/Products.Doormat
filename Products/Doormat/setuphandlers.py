@@ -8,7 +8,7 @@ def createDefaultContent(portal):
     portal.invokeFactory('Doormat', 'doormat')
     doormat = portal.doormat
     doormat.setTitle('Doormat')
-    doormat.setExcludeFromNav(True)
+    doormat.setExcludeFromNav(True)  # Don't show in portal sections
     doormat.reindexObject()
 
 
