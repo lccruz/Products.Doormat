@@ -5,7 +5,8 @@ from plone.app.testing import TEST_USER_ID, setRoles
 import unittest2 as unittest
 
 
-class ProductsDoormatSetupTest(unittest.TestCase):
+class ProductsBaseDoormatViewTest(unittest.TestCase):
+    """Test with only default doormat content."""
 
     layer = PRODUCTS_DOORMAT_INTEGRATION_TESTING
 
