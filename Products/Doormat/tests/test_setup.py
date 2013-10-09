@@ -40,6 +40,11 @@ class ProductsDoormatSetupTest(unittest.TestCase):
     def test_default_content_created(self):
         self.assertTrue('doormat' in self.portal.objectIds())
 
+    def test_default_content_indexed(self):
+        brain = self.portal.portal_catalog.searchResults(
+            {'portal_type': 'Doormat'})[0]
+        self.assertEqual(brain.Title, 'Doormat')
+
 
 def test_suite():
     return unittest.defaultTestLoader.loadTestsFromName(__name__)
