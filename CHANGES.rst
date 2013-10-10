@@ -10,7 +10,6 @@ Changelog
   Add uninstall profile.
   [khink]
 
-
 0.8 (2013-08-23)
 ----------------
 
