@@ -1,4 +1,5 @@
 .. image:: https://travis-ci.org/collective/Products.Doormat.png
+  :target: https://travis-ci.org/collective/Products.Doormat
 
 .. image:: https://coveralls.io/repos/collective/Products.Doormat/badge.png
   :target: https://coveralls.io/r/collective/Products.Doormat
