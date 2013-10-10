@@ -1,10 +1,11 @@
 Changelog
 =========
 
-1.0 (unreleased)
-----------------
+0.9.1 (unreleased)
+------------------
 
-- Nothing changed yet.
+- Make content creation depend on types.
+  [khink]
 
 
 0.9 (2013-10-10)
