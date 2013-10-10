@@ -1,7 +1,21 @@
 Changelog
 =========
 
-0.9 (unreleased)
+1.0 (unreleased)
+----------------
+
+- Nothing changed yet.
+
+
+0.9.1 (2013-10-10)
+------------------
+
+- Make content creation depend on types, fixes error in install.
+  Make clicking "Deactivate" run the uninstall profile.
+  [khink]
+
+
+0.9 (2013-10-10)
 ----------------
 
 - Remove UML.

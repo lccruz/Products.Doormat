@@ -16,7 +16,8 @@
       name="Products.Doormat"
       title="Products.Doormat special import handlers"
       description=""
-      handler="Products.Doormat.setuphandlers.setupVarious"
-      />
+      handler="Products.Doormat.setuphandlers.setupVarious">
+    <depends name="types" />
+  </genericsetup:importStep>
 
 </configure>
