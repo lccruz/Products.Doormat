@@ -11,22 +11,33 @@ DEFAULT_DOORMAT_DOCUMENT_TITLE = "Document title"
 logger = logging.getLogger('Doormat: setuphandlers')
 
 
+def _tryInvokeFactory(folder, ptype, oid):
+    """Returns an object (of portal_type ptype) with a specific id (oid) from
+    a given folder.
+
+    If it doesn't exist, create it.
+    """
+    if not hasattr(folder, oid):
+        folder.invokeFactory(ptype, oid)
+    else:
+        # Note that we don't check if the existing object is of the correct
+        # type. But then we'd have to use a new id, check if that exists, etc.
+        pass
+    return getattr(folder, oid)
+
+
 def createDefaultContent(portal):
-    portal.invokeFactory('Doormat', 'doormat')
-    doormat = portal.doormat
+    doormat = _tryInvokeFactory(portal, 'Doormat', 'doormat')
     doormat.setTitle('Doormat')
     doormat.setExcludeFromNav(True)  # Don't show in portal sections
     doormat.reindexObject()
-    doormat.invokeFactory('DoormatColumn', 'column-1')
-    column = getattr(doormat, 'column-1')
+    column = _tryInvokeFactory(doormat, 'DoormatColumn', 'column-1')
     column.setTitle('Section 1')
     column.reindexObject()
-    column.invokeFactory('DoormatSection', 'section-1')
-    section = getattr(column, 'section-1')
+    section = _tryInvokeFactory(column, 'DoormatSection', 'section-1')
     section.setTitle('Section 1')
     section.reindexObject()
-    section.invokeFactory("Document", 'document-1')
-    document = getattr(section, 'document-1')
+    document = _tryInvokeFactory(section, "Document", 'document-1')
     if document.meta_type.startswith('Dexterity'):
         # A Dexterity-link
         document.text = DEFAULT_DOORMAT_DOCUMENT_HTML
