@@ -9,5 +9,5 @@ script: bin/coverage
 after_success:
   coveralls
 branches:
-	except:
-		- plone5
+  except:
+    - plone5
