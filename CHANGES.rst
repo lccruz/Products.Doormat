@@ -4,7 +4,8 @@ Changelog
 0.9.1 (unreleased)
 ------------------
 
-- Make content creation depend on types.
+- Make content creation depend on types, fixes error ion install.
+  Make clicking "Deactivate" run the uninstall profile.
   [khink]
 
 
