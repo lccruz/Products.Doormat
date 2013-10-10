@@ -4,4 +4,7 @@ install:
   - mkdir -p buildout-cache/downloads
   - python bootstrap.py -c buildout.cfg
   - bin/buildout -N -t 3 -c buildout.cfg
-script: bin/test
+  - pip install coveralls
+script: bin/coverage
+after_success:
+  coveralls
