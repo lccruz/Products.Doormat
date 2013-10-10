@@ -50,6 +50,7 @@ your Plone site, which should show up in the folder contents of the site.
 Inside it, you can create a hierarchical structure of Columns,
 Sections, links (both internal and external), Documents (Plone's Page type),
 and Links to a Collection (DoormatCollection).
+There should be one Column, one Section and one Document already there.
 
 The Doormat may look like this, schematically::
 
@@ -65,10 +66,10 @@ The Doormat may look like this, schematically::
     |  |  |  +-- Link 2 --+ | |  | |  +-- Link 2 --+ | |  | |  |                     | | |  |
     |  |  |  +------------+ | |  | |  +------------+ | |  | |  +---------------------+ | |  |
     |  |  |                 | |  | |                 | |  | |                          | |  |
-    |  |  |                 | |  | |                 | |  | |  +- DoormatCollection -+ | |  |
-    |  |  |                 | |  | |                 | |  | |  |                     | | |  |
-    |  |  |                 | |  | |                 | |  | |  | Item 1 from Collctn | | |  |
-    |  |  |                 | |  | |                 | |  | |  | Item 2 from Collctn | | |  |
+    |  |  |  +- Document -+ | |  | |                 | |  | |  +- DoormatCollection -+ | |  |
+    |  |  |  |            | | |  | |                 | |  | |  |                     | | |  |
+    |  |  |  |            | | |  | |                 | |  | |  | Item 1 from Collctn | | |  |
+    |  |  |  +------------+ | |  | |                 | |  | |  | Item 2 from Collctn | | |  |
     |  |  |                 | |  | |                 | |  | |  | (...)               | | |  |
     |  |  |                 | |  | |                 | |  | |  | Link to Collection  | | |  |
     |  |  |                 | |  | |                 | |  | |  |                     | | |  |
@@ -181,9 +182,22 @@ product you're developing.
 Caveats
 =======
 
+More than one Doormat
+---------------------
+
 The viewlet does a catalog lookup for the `Doormat` portal type. If you have
 more than one object of this type (nothing stops you), it will use the oldest
 one.
+
+Uninstalling removes content
+----------------------------
+
+If you run the uninstall profile, like when you uninstall the product, **all
+content will be deleted**. This ensures the product uninstalls cleanly, for
+the convenience of migrations and of those just wanting to try it out.
+
+If you have a Doormat in your site and you are happy with it, don't click
+uninstall.
 
 
 Dependencies / Requirements
@@ -198,7 +212,9 @@ The product works on:
 Credits
 =======
 
-This product was sponsored by GroningerForum_.
+See Changelog.
+
+This product was originally sponsored by GroningerForum_.
 
 
 .. _examples: http://www.welie.com/patterns/showPattern.php?patternID=doormat

@@ -4,10 +4,10 @@ Changelog
 0.9 (unreleased)
 ----------------
 
-- Add tests (using plone.app.testing) and use Travis.
-  [khink]
-
-- Deprecate UML.
+- Remove UML.
+  Add tests, use Travis and Coveralls.
+  Create a Doormat on install.
+  Add uninstall profile.
   [khink]
 
 
