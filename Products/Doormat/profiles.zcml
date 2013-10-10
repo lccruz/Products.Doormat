@@ -17,7 +17,7 @@
       name="uninstall"
       title="Doormat Uninstall Profile"
       directory="profiles/uninstall"
-      description="Removes Doormat."
+      description="Uninstalls Products.Doormat. Also removes the Doormat object and the content in it."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 

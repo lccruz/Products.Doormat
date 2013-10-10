@@ -34,6 +34,11 @@ def createDefaultContent(portal):
         document.setTitle(DEFAULT_DOORMAT_DOCUMENT_TITLE)
 
 
+def removeContent(context):
+    portal = context.getSite()
+    portal.manage_delObjects(['doormat'])
+
+
 def isNotDoormatProfile(context):
     return context.readDataFile("Doormat_marker.txt") is None
 

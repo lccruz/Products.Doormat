@@ -11,6 +11,7 @@
     cookable="False"
     enabled="1"
     expression=""
+    remove="True"
     />
 
 </object>
