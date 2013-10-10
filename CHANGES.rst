@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.9.1 (unreleased)
+0.9.1 (2013-10-10)
 ------------------
 
 - Make content creation depend on types, fixes error ion install.
