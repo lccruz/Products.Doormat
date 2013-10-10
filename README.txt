@@ -20,6 +20,7 @@ doormat is placed in the Plone footer. The links in the Doormat are managed as
 content, making the Doormat more flexible than a sitemap.  It's also possible
 to add external links. It's also possible to add bits of text, with markup.
 
+
 Quick feature overview
 ======================
 
@@ -29,6 +30,7 @@ Quick feature overview
 * Links from Plone Collections
 * Can have any number of columns
 * Can have multiple sections per column
+
 
 Similar products
 ================
@@ -41,6 +43,7 @@ collective.doormat_ also lets you creates a doormat in your site, but takes a di
 This approach is a lot easier for maintaining the doormat.
 
 It doesn't take permissions into account, so links might point to internal content to which the visitor viewing the page has no access. There is also no way to add content from collections.
+
 
 Getting started
 ===============
@@ -94,6 +97,7 @@ plone.org_ doormat: it adds a Column, which can contain more than one Section.
 An example using this structure is the Oosterpoort_, which actually is the
 product's predecessor.
 
+
 Adding a Document
 =================
 
@@ -134,6 +138,7 @@ Links to Collections
 It's also possible to add a "Link to Collection" item (DoormatCollection). This
 allows yout to point to a Plone Collection object, and take the items from
 that.
+
 
 Simple configuration
 ====================
