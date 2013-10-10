@@ -8,3 +8,6 @@ install:
 script: bin/coverage
 after_success:
   coveralls
+branches:
+	except:
+		- plone5
