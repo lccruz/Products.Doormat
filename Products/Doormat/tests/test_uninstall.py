@@ -11,11 +11,15 @@ class DoormatUninstallTest(unittest.TestCase):
 
     layer = PRODUCTS_DOORMAT_INTEGRATION_TESTING
 
+    def createMoreTestingContent(self):
+        self.portal.invokeFactory("Doormat", 'extra-doormat')
+
     def setUp(self):
         self.portal = self.layer['portal']
         self.request = self.layer['request']
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
         self.types = self.portal.portal_types
+        self.createMoreTestingContent()
         applyProfile(self.portal, 'Products.Doormat:uninstall')
 
     def test_contenttypes_uninstalled(self):
@@ -40,8 +44,11 @@ class DoormatUninstallTest(unittest.TestCase):
             '++resource++Products.Doormat.stylesheets/doormat.css' in
             stylesheets_ids)
 
-    def test_doormat_content_removed(self):
+    def test_default_doormat_removed(self):
         self.assertFalse('doormat' in self.portal.objectIds())
+
+    def test_extra_doormat_removed(self):
+        self.assertFalse('extra-doormat' in self.portal.objectIds())
 
 
 def test_suite():

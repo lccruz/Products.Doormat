@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
+from Products.CMFCore.utils import getToolByName
 import logging
+
 
 DEFAULT_DOORMAT_DOCUMENT_HTML = """<p>
 This is the default doormat text.
@@ -36,7 +38,16 @@ def createDefaultContent(portal):
 
 def removeContent(context):
     portal = context.getSite()
-    portal.manage_delObjects(['doormat'])
+    # Usually this should be enough
+    if hasattr(portal, 'doormat'):
+        portal.manage_delObjects(['doormat'])
+    catalog = getToolByName(portal, 'portal_catalog')
+    # Remove _everything_.
+    for ptype in ['DoormatReference', 'DoormatCollection', 'DoormatMixin',
+                  'DoormatSection', 'DoormatColumn', 'Doormat']:
+        for brain in catalog(portal_type=ptype):
+            obj = brain.getObject()
+            obj.aq_parent.manage_delObjects(brain.getId)
 
 
 def isNotDoormatProfile(context):
