@@ -227,3 +227,4 @@ This product was originally sponsored by GroningerForum_.
 .. _Oosterpoort: http://www.de-oosterpoort.nl
 .. _GroningerForum: http://www.groningerforum.nl
 .. _collective.doormat: http://plone.org/products/collective.doormat
+

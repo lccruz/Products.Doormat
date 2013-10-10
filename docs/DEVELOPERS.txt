@@ -14,3 +14,4 @@ Therefore the UML model and everything that's related to it was removed.
 
 You'll still find the UML and its documentation in a pre-0.9 version of the
 code.
+
