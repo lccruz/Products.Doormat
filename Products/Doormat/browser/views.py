@@ -22,7 +22,7 @@ except pkg_resources.DistributionNotFound:
     HAS_PAC = False
 else:
     HAS_PAC = True
-    from plone.app.contentypes.interfaces import ICollection as IDXCollection
+    from plone.app.contenttypes.interfaces import ICollection as IDXCollection
 
 
 class DoormatView(BrowserView):
