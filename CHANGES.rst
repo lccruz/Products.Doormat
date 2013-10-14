@@ -4,7 +4,8 @@ Changelog
 1.0 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fix typo that broke Doormat when used with plone.app.contenttypes version 1.0b2 or above
+  [ericof]
 
 
 0.9.1 (2013-10-10)
