@@ -197,7 +197,7 @@ class DoormatView(BrowserView):
             else:
                 results = col.queryCatalog(sort_limit=item.limit)[:item.limit]
         else:
-            results = col.getCollection().queryCatalog()
+            results = col.queryCatalog()
 
         return results
 
