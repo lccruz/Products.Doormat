@@ -3,6 +3,7 @@ from AccessControl import ClassSecurityInfo
 from Products.Archetypes import atapi
 from Products.ATContentTypes.content.base import ATCTContent
 from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
+from Products.Doormat import DoormatMF as _
 from Products.Doormat.config import PROJECTNAME
 from archetypes.referencebrowserwidget.widget import ReferenceBrowserWidget
 from zope.interface import implements
@@ -14,7 +15,7 @@ schema = atapi.Schema((
     atapi.ReferenceField(
         name='collection',
         widget=ReferenceBrowserWidget(
-            label='Collection',
+            label=_(u'Collection'),
             label_msgid='Doormat_label_collection',
             i18n_domain='Doormat',
         ),
@@ -24,10 +25,10 @@ schema = atapi.Schema((
     atapi.ReferenceField(
         name='showMoreLink',
         widget=ReferenceBrowserWidget(
-            label=""""Show more" link""",
-            description="Optionally, add a location for an extra link that "
+            label=_(u"'Show more' link"),
+            description=_(u"Optionally, add a location for an extra link that "
                         "will be displayed below the items, like a link to "
-                        "the collection itself.",
+                        "the collection itself."),
             label_msgid='Doormat_label_showMoreLink',
             description_msgid='Doormat_help_showMoreLink',
             i18n_domain='Doormat',
@@ -37,8 +38,8 @@ schema = atapi.Schema((
     atapi.StringField(
         name='showMoreText',
         widget=atapi.StringField._properties['widget'](
-            label=""""Show more" text""",
-            description="""The text for the "Show more" link.""",
+            label=_(u"'Show more' text"),
+            description=_(u"The text for the 'Show more' link."),
             label_msgid='Doormat_label_showMoreText',
             description_msgid='Doormat_help_showMoreText',
             i18n_domain='Doormat',
@@ -47,9 +48,9 @@ schema = atapi.Schema((
     atapi.IntegerField(
         name='limit',
         widget=atapi.IntegerField._properties['widget'](
-            label="Limit number of items",
-            description="Maximum number of items to be shown, leave blank for "
-                        "all items.",
+            label=_(u"Limit number of items"),
+            description=_(u"Maximum number of items to be shown, leave blank for "
+                        "all items."),
             label_msgid='Doormat_label_limit',
             description_msgid='Doormat_help_limit',
             i18n_domain='Doormat',
@@ -58,8 +59,8 @@ schema = atapi.Schema((
     atapi.BooleanField(
         name='showTime',
         widget=atapi.BooleanField._properties['widget'](
-            label="Show time",
-            description="Show the item's last modification time",
+            label=_(u"Show time"),
+            description=_(u"Show the item's last modification time"),
             label_msgid='Doormat_label_showTime',
             description_msgid='Doormat_help_showTime',
             i18n_domain='Doormat',

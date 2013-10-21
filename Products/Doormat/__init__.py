@@ -6,6 +6,9 @@ from config import DEFAULT_ADD_CONTENT_PERMISSION
 from config import ADD_CONTENT_PERMISSIONS
 from config import PROJECTNAME
 from config import product_globals
+from zope.i18nmessageid import MessageFactory
+
+DoormatMF = MessageFactory("Doormat")
 
 import logging
 

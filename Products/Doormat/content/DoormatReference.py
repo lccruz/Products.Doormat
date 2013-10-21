@@ -5,6 +5,7 @@ from Products.ATContentTypes.content.base import ATCTContent
 from zope.interface import implements
 from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 from Products.Doormat.config import PROJECTNAME
+from Products.Doormat import DoormatMF as _
 
 import interfaces
 
@@ -21,7 +22,7 @@ schema = atapi.Schema((
     atapi.ReferenceField(
         name='internal_link',
         widget=ReferenceBrowserWidget(
-            label='Internal_link',
+            label=_(u'Internal_link'),
             label_msgid='Doormat_label_internal_link',
             i18n_domain='Doormat',
         ),
