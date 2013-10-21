@@ -4,6 +4,15 @@ Changelog
 1.0 (unreleased)
 ----------------
 
+- Updated classifiers list and keywords for package
+  [macagua]
+
+- Added Spanish translation
+  [macagua]
+  
+- Added i18n support
+  [macagua]
+
 - Fix typo that broke Doormat when used with plone.app.contenttypes version 1.0b2 or above
   [ericof]
 
