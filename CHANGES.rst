@@ -9,12 +9,15 @@ Changelog
 
 - Added Spanish translation
   [macagua]
-  
+
 - Added i18n support
   [macagua]
 
 - Fix typo that broke Doormat when used with plone.app.contenttypes version 1.0b2 or above
   [ericof]
+
+- Fixed DoormatCollection without limit
+  [lccruz]
 
 
 0.9.1 (2013-10-10)
