@@ -40,11 +40,28 @@ class ProductsDoormatSetupTest(unittest.TestCase):
     def test_default_content_created(self):
         self.assertTrue('doormat' in self.portal.objectIds())
 
-    def test_default_content_brain(self):
+    def test_default_contents_brain(self):
+        from Products.Doormat.setuphandlers import DEFAULT_DOORMAT_DOCUMENT_HTML_LINK
+        from Products.Doormat.setuphandlers import DEFAULT_DOORMAT_DOCUMENT_TITLE
+        #test for title and exclude from nav Doormat
         brain = self.portal.portal_catalog.searchResults(
             {'portal_type': 'Doormat'})[0]
         self.assertEqual(brain.Title, 'Doormat')
         self.assertTrue(brain.exclude_from_nav)
+        #test for contents title
+        brains = self.portal.portal_catalog.searchResults(
+            {'portal_type': ['Doormat','DoormatColumn','DoormatSection']})
+        titles = [brain.Title for brain in brains]
+        self.assertItemsEqual(titles, ['Doormat', 'Column 1', 'Section 1'])
+        #test document
+        brain = self.portal.portal_catalog.searchResults(
+            {'portal_type': 'DoormatSection'})[0]
+        brain = self.portal.portal_catalog.searchResults(
+            path={"query": brain.getPath(),'depth': 1})[0]
+        self.assertEqual(brain.Title, DEFAULT_DOORMAT_DOCUMENT_TITLE)
+        self.assertEqual(brain.getPath().replace('/%s' % (self.portal.getId()),''), DEFAULT_DOORMAT_DOCUMENT_HTML_LINK)
+
+
 
 
 def test_suite():

@@ -3,10 +3,11 @@ from Products.CMFCore.utils import getToolByName
 import logging
 
 
+DEFAULT_DOORMAT_DOCUMENT_HTML_LINK = "/doormat/column-1/section-1/document"
 DEFAULT_DOORMAT_DOCUMENT_HTML = """<p>
 This is the default doormat text.
-Please go to /doormat/column-1/section-1/document/edit to edit it.
-</p>"""
+Please go to %s/edit to edit it.
+</p>""" % (DEFAULT_DOORMAT_DOCUMENT_HTML_LINK)
 DEFAULT_DOORMAT_DOCUMENT_TITLE = "Document title"
 logger = logging.getLogger('Doormat: setuphandlers')
 
@@ -32,12 +33,12 @@ def createDefaultContent(portal):
     doormat.setExcludeFromNav(True)  # Don't show in portal sections
     doormat.reindexObject()
     column = _tryInvokeFactory(doormat, 'DoormatColumn', 'column-1')
-    column.setTitle('Section 1')
+    column.setTitle('Column 1')
     column.reindexObject()
     section = _tryInvokeFactory(column, 'DoormatSection', 'section-1')
     section.setTitle('Section 1')
     section.reindexObject()
-    document = _tryInvokeFactory(section, "Document", 'document-1')
+    document = _tryInvokeFactory(section, "Document", 'document')
     if document.meta_type.startswith('Dexterity'):
         # A Dexterity-link
         document.text = DEFAULT_DOORMAT_DOCUMENT_HTML
@@ -45,6 +46,7 @@ def createDefaultContent(portal):
     else:
         document.setText(DEFAULT_DOORMAT_DOCUMENT_HTML)
         document.setTitle(DEFAULT_DOORMAT_DOCUMENT_TITLE)
+        document.reindexObject()
 
 
 def removeContent(context):
